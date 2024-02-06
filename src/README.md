@@ -29,7 +29,7 @@ public class HelloWorld { *//클래스 선언부* <br>
 } *//메소드 종료*<br>
 } *//클래스 종료*<br>
 
-
+   
 2. result<br>
 'public class Statement {<br>
    public static void main(String[] args) {<br>
@@ -41,7 +41,7 @@ public class HelloWorld { *//클래스 선언부* <br>
         int x; *//x라는 변수를 선언*<br>
         x = 1; *//x에 1을 저장해라*<br>
         int y = 2; *//y를 선언하고 2를 저장해라*<br>
-        int result = x + y; *//result를 선언하소 x와 y를 더해서 저장하라*<br>
+        int result = x + y; *//result를 선언하고 x와 y를 더해서 저장하라*<br>
         System.out.println(result); *//출력하라*<br>
    }<br>
 }'

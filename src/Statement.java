@@ -9,7 +9,7 @@ public class Statement {
         int x; //x라는 변수를 선언
         x = 1; //x에 1을 저장해라
         int y = 2; //y를 선언하고 2를 저장해라
-        int result = x + y; //result를 선언하소 x와 y를 더해서 저장하라
+        int result = x + y; //result를 선언하고 x와 y를 더해서 저장하라
         System.out.println(result); //출력하라
     }
 }

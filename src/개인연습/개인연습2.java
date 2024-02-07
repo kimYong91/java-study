@@ -1,3 +1,5 @@
+package 개인연습;
+
 public class 개인연습2 {
     public static void main(String[] args) {
         System.out.println("Hello, 2024.02.07");

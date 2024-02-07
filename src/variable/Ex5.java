@@ -1,5 +1,4 @@
 package variable;
-
 public class Ex5 {
     public static void main(String[] args) {
         /*
@@ -10,11 +9,12 @@ public class Ex5 {
         String name = "홍길동";
         int age = 25;
         String tel1 = "010", tel2 = "1234", tel3 = "4567";
+
+
         System.out.println("이름 : " + name);
-        System.out.println("나이 : " + age);
-        //System.out.println("전화 : " + "010" + "-1234" + "-4567");
-        System.out.print();
-        System.out.printf();
+        System.out.print("나이 : " + age + "\n"); // System.out.println("나이 : " + age);
+        //System.out.println("전화 : " + "010" + "-1234" + "-4567")
+        System.out.printf("\n전화 : %s-%s-%s", tel1, tel2, tel3);
 
     }
 }

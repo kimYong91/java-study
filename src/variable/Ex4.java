@@ -22,11 +22,18 @@ public class Ex4 {
         System.out.println(number);
 
         double decimal = 3.14;
-        double d = decimal;
+        double d;
         d = decimal;
-        System.out.println(d);
+        decimal = 2.71828;
+        System.out.println(decimal);
 
         char letter = 'A';
+        char b;
+        b = letter;
+        letter = b;
+        System.out.println(letter);
+
+
         boolean isTrue = true;
 
 

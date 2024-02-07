@@ -1,8 +1,7 @@
 package variable;
-
 public class Print1 {
     public static void main(String[] args) {
-        // 시스템 출력장치로 매개변수는 풀력하고, 행(ln)을 변경하라
+        // 시스템 출력장치로 매개변수는 출력하고, 행(ln)을 변경하라
         System.out.println("printlm");
         System.out.println("printlm");
         System.out.print("print"); // 헹을 변경하지 않고 출력

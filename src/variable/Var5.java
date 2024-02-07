@@ -28,6 +28,5 @@ public class Var5 {
         int a; // 단순 예제 시에만 사용
 
         int gustNumber; //용도를 명활하게 설명 가능
-        int orderCount;
     }
 }

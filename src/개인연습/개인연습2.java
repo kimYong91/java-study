@@ -14,9 +14,9 @@ public class 개인연습2 {
         resurlt =c+d; // 앞에서 int 로 선언을 하였기에 뒤에서는 int 를 뺴야한다.
         System.out.println(resurlt);
 
-        double e = 3.5;
-        double f = 20.8;
-        resurlt = e + f;
+       // double e = 3.5;
+       // double f = 20.8;
+      //  resurlt = e + f;
 
     }
 }

@@ -1,7 +1,4 @@
 package variable;
-
-import java.sql.SQLOutput;
-
 public class Escape {
     public static void main(String[] args) {
         // 이스케이프 문자

@@ -1,6 +1,6 @@
 public class 개인연습2 {
     public static void main(String[] args) {
-        System.out.println("2024.02.07");
+        System.out.println("Hello, 2024.02.07");
 
         int a = 2000;
         int b = 24;

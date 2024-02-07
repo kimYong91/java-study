@@ -7,8 +7,8 @@ public class Ex2 {
         // sum을 출력하세요.
         int n1 = 30;
         int n2 = 40;
-        int sum;
-        System.out.println();
+        int sum = n1 + n2;
+        System.out.println("총합: " + sum);
 
     }
 }

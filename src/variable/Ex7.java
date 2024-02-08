@@ -11,6 +11,7 @@ public class Ex7 {
 
         (입력한 이름, 주민번호, 전화번호 출력)
          */
+
         Scanner scanner = new Scanner(System.in);
         System.out.print("1. 이름: ");
         String name = scanner.nextLine();
@@ -21,6 +22,9 @@ public class Ex7 {
 
         Scanner scanner2 = new Scanner(System.in);
         System.out.print("3. 전화번호: ");
-        String phone = scanner2.nextLine();
+        String phone = scanner2.nextLine(); // 전화번호를 작성하고 다음으로 넘어가게 하는 명령문, \n은 바로 다음으로 넘어간다.
+
+        Scanner scanner3 = new Scanner(System.in);
+        System.out.print("4. 주소 : ");
     }
 }

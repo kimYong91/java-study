@@ -12,7 +12,12 @@ public class Ex3 {
         추가 요금이 발생합니다.
         24시간을 초과하는 주차의 경우에는 일일 최대 요금인 30000원을 적용하세요.
          */
-        Scanner scanner = new Scanner(System.in);
         System.out.println("주차 시간을 엄수해 주세요");
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("주차 이용 시간 : ");
+        int prkingtime = scanner.nextInt();
+        scanner.close();
+
+
     }
 }

@@ -21,8 +21,32 @@ public class Ex4 {
         System.out.print("연산자를 입력하세요: ");
         String operator = scanner.next();
 
-        double result;
+        double reseult;
 
-        // ...
+        switch (operator) {
+            case "+":
+                reseult = first + second;
+                System.out.println("결과 : " + reseult);
+                break;
+            case "-":
+                reseult = first - second;
+                System.out.println("결과 : " + reseult);
+                break;
+            case "/":
+                if (second == 0){
+                    System.out.println("결과 : 0은 나눌수 없습니다.");
+                } else if (first == 0){
+                    System.out.println("결과 : 0은 나눌수 없습니다.");
+                }
+                reseult = first / second;
+                System.out.println("결과 : " + reseult);
+                break;
+            case "*":
+                reseult = first * second;
+                System.out.println("결과 : " + reseult);
+                break;
+
+        }
+        scanner.close();
+        }
     }
-}

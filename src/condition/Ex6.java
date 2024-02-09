@@ -13,7 +13,26 @@ public class Ex6 {
         // Switch문을 활용해서 각 등급마다 혜택을 받는 조건문 프로그래밍을 만들어주세요.
 
         Scanner scanner = new Scanner(System.in);
+        System.out.print("회원 등급 : ");
         String grade = scanner.next();
+
+        switch (grade) {
+            case "A":
+                System.out.println("VVIP와 VIP 혜택");
+                break;
+            case "B":
+                System.out.println("VIP 혜택");
+                break;
+            case "C":
+                System.out.println("우수회원과 일반회원 혜택");
+                break;
+            case "D":
+                System.out.println("일반회원 혜택");
+                break;
+            default:
+                System.out.println("잘 못 입력하셨습니다.");
+        }
+        System.out.println("감사합니다");
 
     }
 }

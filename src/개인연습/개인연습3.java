@@ -25,11 +25,6 @@ public class 개인연습3 {
         } else {
             System.out.println("A / b = " + (A / B));
         }
-
-
-
-
-
-        }
-
     }
+
+}

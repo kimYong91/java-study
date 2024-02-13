@@ -11,9 +11,9 @@ public class Loop1 {
          */
 
 
-        int count = 0; // 초기값
+        int count = 1; // 초기값
 
-        while (count < 3) // 조건식
+        while (count < 5) // 조건식
         count ++;         // 증강식
         System.out.println("숫자 :" + count);
 

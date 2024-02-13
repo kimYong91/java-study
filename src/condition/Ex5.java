@@ -21,8 +21,8 @@ public class Ex5 {
         String username = scanner.next();
         System.out.print("비밀번호 : ");
         String pasPassword = scanner.next();
-        scanner.close();
 
+        // if (username.equals(validUsername) && (pasPassword.equals(validPassword) *이게 좀더 정확함
         if ((username == validUsername) && (pasPassword == validPassword)) {
             System.out.println("로그인 성공");
         } else {

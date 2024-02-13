@@ -16,13 +16,19 @@ public class Ex7 {
         int b = scanner.nextInt();
 
         int gcd, lcm;   // 최대공약수, 최소공배수
+        int originalA = a;  // 원래 숫자를 보관
+        int originalB = b;
 
         while (b != 0) {
-            int temp = b; //이전 c값을 임시 변수에 보관
-            b = a % b; // 나머지를 다시 b에 대입한다. 나머지가 있으면 계속 나눈다.
-            a = temp;
+            int temp = b;   // 이전 b값을 임시 변수에 보관
+            b = a % b;      // 나머지를 다시 b에 대입한다. 나머지가 있으면 계속 나눈다.
+            a = temp;       // 이전 b값을 a에 대입
         }
-        int gdc = a;
-        System.out.println();
+
+        gcd = a;                              // 최대공약수
+        lcm = (originalA * originalB) / gcd;  //  최소공배수
+        System.out.println("최대공약수 : " + gcd);
+        System.out.println("최소공배수 : " + lcm);
+
     }
 }

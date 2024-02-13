@@ -14,7 +14,5 @@ public class Ex7 {
 
 
         System.out.println(((number % 2 == 0) ? "짝수" : "홀수") + "입니다.");
-
-
     }
 }

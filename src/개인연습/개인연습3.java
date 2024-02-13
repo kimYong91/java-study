@@ -10,20 +10,20 @@ public class 개인연습3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("A : ");
-        int A = scanner.nextInt();
+        System.out.print("a : ");
+        int a = scanner.nextInt();
         System.out.print("B : ");
-        int B = scanner.nextInt();
+        int b = scanner.nextInt();
 
-        System.out.println("A + b = " + (A + B));
-        System.out.println("A - b = " + (A - B));
-        System.out.println("A * b = " + (A * B));
-        System.out.println("A % b = " + (A % B));
+        System.out.println("a + b = " + (a + b));
+        System.out.println("a - b = " + (a - b));
+        System.out.println("a * b = " + (a * b));
+        System.out.println("a % b = " + (a % b));
 
-        if (B == 0) {
+        if (b == 0) {
             System.out.println("0은 나누어지지 않습니다.");
         } else {
-            System.out.println("A / b = " + (A / B));
+            System.out.println("a / b = " + (a / b));
         }
     }
 

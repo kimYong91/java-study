@@ -47,6 +47,5 @@ public class Ex4 {
                 break;
 
         }
-        scanner.close();
         }
     }

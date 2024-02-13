@@ -17,6 +17,7 @@ public class Ex8 {
 
         // 반복문과 조건문을 통해서 숫자 추측 게임을 만들어보세요
 
+//        연습
 //        Scanner scanner = new Scanner(System.in);
 //        System.out.print("answer : ");
 //        int a = scanner.nextInt();

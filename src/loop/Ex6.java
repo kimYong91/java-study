@@ -24,7 +24,8 @@ public class Ex6 {
             System.out.print(" " + next);
             first =second;  // 두번째 항이 첫번째 항이 됨
             second = next;
-
+                // i = 3 > 0 1 1 2 3 5 8 13 21
+                // i = 0 > 0 1 1 2 3 5 8 13 21 34
         }
     }
 }

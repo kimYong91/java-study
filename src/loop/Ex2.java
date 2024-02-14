@@ -9,15 +9,17 @@ public class Ex2 {
         // n! (팩토리얼)의 값을 계산하는 프로그램을 작성하세요.
         // while 반복문을 사용하여 구현합니다
         Scanner scanner = new Scanner(System.in);
-        System.out.print("정수 입력: ");
-        int n = scanner.nextInt();
-        int factorial = 1; //초기값 1 : 곱셈
+        System.out.print("정수 : ");
+        int num = scanner.nextInt();
+        int i = 1;
 
-        // code
-        while (n > 0) {
-            factorial *= n;
-            n--;
+
+        while (num > 0) {
+            i *= num;
+            num--;
         }
-        System.out.println("factorial = " + factorial);
+        System.out.println("합계 : " + i);
+
+
     }
 }

@@ -30,8 +30,8 @@ public class Ex6 {
     }
 }
 /*
-n = f0+s1       n = f1(0+1)+s1(0+1) = n2
-f0 = s1         f1 = f1(0+1)+s1(0+1) = f2 = s2
-s1 = n(f0+s1)
-f0 s1 n1
+n = f0+s1       n = f1(0+1)+s1(0+1) = n2            n2 = f2 + s2
+f0 = s1         f1 = f1(0+1)+s1(0+1) = f2 = s2      f2 = s2
+s1 = n(f0+s1)   s2 = n2                             s2 = (f2 + s2) = n4 = s4
+f0 s1 n1        f0 s1 n1 n2                         f0 s1 n1 n2 n4
  */

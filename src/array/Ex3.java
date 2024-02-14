@@ -25,8 +25,25 @@ public class Ex3 {
 //        if () {
 //            System.out.println("학생 점수 : ");
 //        }
+        Scanner scanner = new Scanner(System.in);
+        int sum = 0;
+        System.out.print("학생수는 몇명인가요? ");
 
+        int studentNumber = scanner.nextInt();
+        int[] scores = new int[studentNumber];
 
+        // 배열 요소를 입력받기
+        for (int i = 0; i < scores.length; i++) {
+            scores[i] =  scanner.nextInt();
+        }
+
+        // 점수의 합계 구하기
+        for (int i = 0; i < scores.length; i++) {
+            sum = sum + scores[i];
+        }
+
+        System.out.print(">> 합계 : " + sum);
+        System.out.println(" 평균 : " + (double) sum / scores.length);
 
     }
 }

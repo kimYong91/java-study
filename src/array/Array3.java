@@ -4,7 +4,7 @@ public class Array3 {
     public static void main(String[] args) {
 
         int[] scores;       // 배열 변수 선언
-        scores = new int[] {100,90,50,60,70,30};    // 배열 초기화, {} <- 안에 적은 것만큼 scores가 생성
+        scores = new int[] {100,90,50,60,70,30};    // 배열 초기화, {} <- 안에 적은 것만큼 scores가 생성 ,{이 안에 있는것을 인덱스라한다}
 
         int[] scores2 = {100,90,80}; // 선언과 초기화 동시 가능, ^ 위의 결과와 같음
 

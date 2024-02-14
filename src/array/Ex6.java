@@ -21,14 +21,7 @@ public class Ex6 {
          */
         Scanner scanner = new Scanner(System.in);
         System.out.print("입력 받을 숫자 : ");
-//        int sum = scanner.nextInt();
-//        System.out.println(sum + "개의 정수를 입력하세요.");
-//        int numbers = scanner.nextInt();
-//
-//        int[] scores = {sum};
-//        for (int i = 0; i < scores.length; i++) {
-//            System.out.println(scores.length);
-//        }
+
         int n = scanner.nextInt();      // 입력받은 숫자
 
         int[] nums = new int[n];
@@ -55,3 +48,12 @@ public class Ex6 {
 
     }
 }
+
+//        int sum = scanner.nextInt();
+//        System.out.println(sum + "개의 정수를 입력하세요.");
+//        int numbers = scanner.nextInt();
+//
+//        int[] scores = {sum};
+//        for (int i = 0; i < scores.length; i++) {
+//            System.out.println(scores.length);
+//        }

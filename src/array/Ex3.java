@@ -1,0 +1,32 @@
+package array;
+
+import java.util.Scanner;
+
+public class Ex3 {
+    public static void main(String[] args) {
+        // 점수를 입력받을 학생수를 입력받고
+        // 입력받은 수만큼 학생들의 점수를 입력받은 후, 합계와 평균을 출력해주세요
+        /*
+        예시
+        학생수는 몇명인가요? 3
+        점수를 입력하세요
+        10
+        20
+        30
+        >> 합계 : 60, 평균 : 20.0
+         */
+
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.print("학생 수 : ");
+//        int student = scanner.nextInt();
+//        int[] studentNumbers = {student};
+//
+//        //학생 수 만큼 출력
+//        if () {
+//            System.out.println("학생 점수 : ");
+//        }
+
+
+
+    }
+}

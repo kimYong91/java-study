@@ -19,13 +19,19 @@ public class Ex6 {
         //첫번째와 두번째 출력
         System.out.print("피보나치 수열 : " + first + " " + second);
 
-        for (int i = 3; i < n; i++) {
+        for (int i = 3; i <= n; i++) {
             int next = first + second;
-            System.out.print(" " + next);
-            first =second;  // 두번째 항이 첫번째 항이 됨
+            first = second;  // 두번째 항이 첫번째 항이 됨
             second = next;
+            System.out.print(" " + next);
                 // i = 3 > 0 1 1 2 3 5 8 13 21
                 // i = 0 > 0 1 1 2 3 5 8 13 21 34 55 89
         }
     }
 }
+/*
+n = f0+s1       n = f1(0+1)+s1(0+1) = n2
+f0 = s1         f1 = f1(0+1)+s1(0+1) = f2 = s2
+s1 = n(f0+s1)
+f0 s1 n1
+ */

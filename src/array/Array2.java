@@ -19,7 +19,7 @@ public class Array2 {
         // 기본타입의 초기값 : 숫자는 0, 실수는 0.0, boolean 은 false
         // 참조타입의 최기값 : null
 
-        for (int i = 0; i < scores.length; i++) { //scores.length <- scores 의 길이 만큼 진행
+        for (int i = 0; i < scores.length; i++) { //.length <- scores 의 갯수 만큼 진행
             System.out.println(i + 1 + "번 점수 : " + scores[i]);
         }
         // 배열을 사용하면 반복문으로 리펙토링 할 수 있다.

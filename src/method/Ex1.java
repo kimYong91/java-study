@@ -11,11 +11,11 @@ public class Ex1 {
         System.out.print("B : ");
         int b = scanner.nextInt();
 
+        sub(a, b);
+        System.out.println(sub(a, b));
 
     }
-    public static int sum(int a, int b) {
-        int sum = a - b;
-        System.out.println("A - B : " + sum);
-        return sum;
+    public static int sub(int a, int b) {
+        return a-b;
         }
     }

@@ -14,7 +14,8 @@ public class Ex3 {
             sum += numbers[i];
         }*/
         // 향상된 for문
-        for (int number : numbers) {
+        for (int i = 0; i < numbers.length; i++) {
+            int number = numbers[i];
             sum += number;
         }
         return sum / numbers.length;

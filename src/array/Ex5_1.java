@@ -18,7 +18,8 @@ public class Ex5_1 {
         int[][] scores = new int[studentNumber][subjects.length]; // 행 : 학생, 열: 과목점수
 
         // 점수 입력
-        for (int[] students : scores) {
+        for (int j = 0; j < scores.length; j++) {
+            int[] students = scores[j];
             System.out.println("학생의 성적을 입력하세요");
             for (int i = 0; i < subjects.length; i++) {
                 System.out.print(subjects[i] + "점수: ");

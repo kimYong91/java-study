@@ -13,6 +13,7 @@ public class Method1 {
 //        int sum2 = x2 + y2;
 //        System.out.println("덧셈 결과 2 : " + sum2);
         sum(5,6);
+
     }
 
     // 함수 (function)

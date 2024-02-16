@@ -2,8 +2,6 @@ package method;
 
 import java.util.Scanner;
 
-import static method.Ex7.printDisplayArray;
-
 public class Ex7_정답 {
     public static void main(String[] args) {
         // 단어 목록에서 무작위로 선택될 단어들
@@ -22,7 +20,8 @@ public class Ex7_정답 {
         boolean wordCompleted = false;
 
 
-        while (tries < MAX_TRIES) {
+        // 최대시도 횟수를 넘어서거나, 단어가 완성되면 종료
+        while (tries < MAX_TRIES && !wordCompleted) {
             System.out.print("단어 추측: ");
             printDisplayArray(displayArray); // 현재까지 맞춘 단어의 상태 출력하는 메서드
             String guess = scanner.nextLine();  // 사용자로부터 글자 추측 받기
@@ -59,3 +58,25 @@ public class Ex7_정답 {
             System.out.println("틀렸습니다. 정답은"+ selectedWord);
         }
     }
+
+
+    // 현재까지 맞춘 단어의 상태를 출력하는 메서드
+    private static void printDisplayArray(char[] displayArray) {
+        // {'j', '_', '_', '_'}
+        for (char c : displayArray) {
+            System.out.print(c + " "); // j _ _ _
+        }
+        System.out.println();   // 행 변경
+    }
+
+    // 단어가 모두 맞춰졌는지 확인하는 메서드
+    private static boolean isWordCompleted(char[] displayArray) {
+        for (char c : displayArray) {
+            if (c == '_') {
+                return false;
+            }
+        }
+        return true;
+    }
+
+}

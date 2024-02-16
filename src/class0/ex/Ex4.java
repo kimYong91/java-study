@@ -33,8 +33,8 @@ public class Ex4 {
     // getTotalPayment 메소드를 통해 총 결제 금액을 구해주세요.
     public static int getTotalPayment(ProductOrder[] orders) {
         int totarpaymeent = 0;
-        for (ProductOrder order : orders) {
-            totarpaymeent += order.price * order.quantity;
+        for (ProductOrder productOrder : orders) {
+            totarpaymeent += productOrder.price * productOrder.quantity;
         }
         return totarpaymeent;
     }

@@ -13,9 +13,34 @@ public class Quiz5 {
 상품명: 키보드, 가격 :50000, 수량 : 1
 총 결제금액 : 2095000원
          */
+        ProductOrder productOrder1;
+        productOrder1.productName = "노트북";
+        productOrder1.price = 1000000;
+        productOrder1.quantity = 2;
+
+        ProductOrder productOrder2;
+        productOrder2.productName = "마우스";
+        productOrder2.price = 15000;
+        productOrder2.quantity = 3;
+
+        ProductOrder productOrder3;
+        productOrder3.productName = "키보드";
+        productOrder3.price = 50000;
+        productOrder3.quantity = 1;
+
+        ProductOrder[] productOrders = new productOrders[3];
+        System.out.println(productOrders[0]);
+        System.out.println(productOrders[1]);
+        System.out.println(productOrders[2]);
+
 
     }
-    public static
+//    public static ProductOrder totalPayment () {
+//
+//        int result =
+//
+//
+//    }
 
 
 }

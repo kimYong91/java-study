@@ -19,7 +19,7 @@ public class Ex7 {
             final int MAX_TRIES = 7; // 최대 시도 횟수
             Scanner scanner = new Scanner(System.in);
 
-            while (tries < MAX_TRIES && !wordCompleted) {
+           // while (tries < MAX_TRIES && !wordCompleted) {
                 System.out.print("단어 추측: ");
                 printDisplayArray(displayArray); // 현재까지 맞춘 단어의 상태 출력하는 메서드
                 String guess = scanner.nextLine();  // 사용자로부터 글자 추측 받기
@@ -44,7 +44,6 @@ public class Ex7 {
 
             // 게임 종료 후 정답 단어와 승리 또는 패배 메시지 출력
         }
-    }
 
     // 현재까지 맞춘 단어의 상태를 출력하는 메서드
     static void printDisplayArray(char[] displayArray) {

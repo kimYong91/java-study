@@ -16,6 +16,7 @@ public class Class4 {
         printInformation(student1);
         printInformation(student2);
 
+
     }
 
     // 학생 객체의 필드 값을 읽어서 출력하는 메서드

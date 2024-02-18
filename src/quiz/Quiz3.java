@@ -17,13 +17,19 @@ public class Quiz3 {
          */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("학생수는 몇명인가요? : ");
+        System.out.print("학생 수는 몇 명인가요? ");
         int studentNumber = scanner.nextInt();
-        System.out.println("점수를 입력하세요. : ");
-        int studentScore = scanner.nextInt();
+        System.out.println("점수를 입력해 주세요");
 
+        int[] studentScores = new int[studentNumber];
+        int totalScores = 0;
 
+        for (int i = 0; i < studentNumber; i++) {
+            studentScores[i] = scanner.nextInt();
+            totalScores += studentScores[i];
+        }
+        double averageScore = (double)totalScores / studentNumber;
+        System.out.println(">> 합계 : " + totalScores + ", 평균 : " + averageScore);
     }
-
-
 }
+

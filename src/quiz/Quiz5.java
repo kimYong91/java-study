@@ -14,33 +14,40 @@ public class Quiz5 {
 총 결제금액 : 2095000원
          */
         ProductOrder productOrder1;
+        productOrder1 = new ProductOrder();
         productOrder1.productName = "노트북";
         productOrder1.price = 1000000;
         productOrder1.quantity = 2;
 
         ProductOrder productOrder2;
+        productOrder2 = new ProductOrder();
         productOrder2.productName = "마우스";
         productOrder2.price = 15000;
         productOrder2.quantity = 3;
 
         ProductOrder productOrder3;
+        productOrder3 = new ProductOrder();
         productOrder3.productName = "키보드";
         productOrder3.price = 50000;
         productOrder3.quantity = 1;
 
-        ProductOrder[] productOrders = new productOrders[3];
-        System.out.println(productOrders[0]);
-        System.out.println(productOrders[1]);
-        System.out.println(productOrders[2]);
 
 
+        ProductOrder[] productOrders = {productOrder1, productOrder2, productOrder3};
+
+
+        double totalPayment = 0;
+
+
+
+
+        for (int i = 0; i <= productOrders.length; i++) {
+            System.out.println("상품명 : " + productOrders[i].productName + ", 가격 : " + productOrders[i].price + ", 수량 : " + productOrders[i].quantity + "개");
+
+            int productPay = productOrders[i].price * productOrders[i].quantity;
+            totalPayment += productPay;
+        }
+        System.out.println(totalPayment);
     }
-//    public static ProductOrder totalPayment () {
-//
-//        int result =
-//
-//
-//    }
-
 
 }

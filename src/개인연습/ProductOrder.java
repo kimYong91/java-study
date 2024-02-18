@@ -3,6 +3,6 @@ package 개인연습;
 public class ProductOrder {
 
     String productName;
-    int price;
+    double price;
     int quantity;
 }

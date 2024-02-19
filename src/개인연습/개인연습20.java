@@ -24,15 +24,24 @@ public class 개인연습20 {
 
             int totalScore = 0; //  합계를 구해야 하는 상황이라면 일단 무조건 0으로 시작할 바구니를 준비해야함
 
-            while (start <= end) {
+//            while (start <= end) {
+//                if (start % 2 == 0) {
+//                    totalScore += start;
+//                    System.out.print(start); // 순서 중요
+//                    if (start < end) {           // 숫자 다음에 +를 하기 위한 코드 end 보다 작을 때만 실행
+//                        System.out.print(" + "); // 끝 숫자전까지만 +가 붙음  * (start != end) 이것도 가능
+//                    }
+//                }
+//                start ++;
+//            }
+
+            for (int i = 0; i < end; i++) {
+                start = i;
                 if (start % 2 == 0) {
                     totalScore += start;
-                    System.out.print(start); // 순서 중요
-                    if (start < end) {           // 숫자 다음에 +를 하기 위한 코드 end 보다 작을 때만 실행
-                        System.out.print(" + "); // 끝 숫자전까지만 +가 붙음  * (start != end) 이것도 가능
-                    }
+                    System.out.println(start);
                 }
-                start ++;
+
             }
             System.out.println(" = " + totalScore);
         }

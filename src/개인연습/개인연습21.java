@@ -2,7 +2,7 @@ package 개인연습;
 
 public class 개인연습21 {
      /*
-    메서드 :       배열에서 최소값과 최대값 찾기
+    메서드 : 배열에서 최소값과 최대값 찾기
     배열 내의 최소값과 최대값을 찾아 출력하는 메소드 findMinAndMax를 작성하세요.
     /* 예시
     int[] numbers = {54, 32, 21, 6, 24, 3, 100, -5};
@@ -25,7 +25,7 @@ public class 개인연습21 {
 
     public static int findMax (int[] numbers) {
         int max = numbers[0];
-        for (int i = 1; i < numbers.length; i++) {
+        for (int i = 0; i < numbers.length; i++) {
             if (max < numbers[i]) {
                 max = numbers[i];
             }
@@ -34,7 +34,7 @@ public class 개인연습21 {
     }
     public static int findMin (int[] numbers) {
         int min = numbers[0];
-        for (int i = 1; i < numbers.length; i++) {
+        for (int i = 0; i < numbers.length; i++) {
             if (min > numbers[i]) {
                 min = numbers[i];
             }

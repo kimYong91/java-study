@@ -26,7 +26,7 @@ public class 개인연습23 {
         System.out.println("========");
         System.out.print("주문의 개수를 입력하세요 : ");
         int orders = scanner.nextInt();
-        ProductOrder[] productInformation = new ProductOrder[orders]; // 창고에 담긴 정보를 보여줄 쇼케이스이지만 셔터문을 열어줄수 있는 출력 메서드가 필요함
+        ProductOrder[] productInformation = new ProductOrder[orders]; // 창고에 담긴 정보를 보여줄 쇼케이스이지만 셔터문(출력 메서드)이 닫혀 있음
 
         for (int i = 0; i < orders; i++) {
             System.out.println("상품 주문을 입력하세요");
@@ -39,6 +39,7 @@ public class 개인연습23 {
 
             productInformation[i] = information(name, price, quantity);
         }
+
         printInformation(productInformation);
 
         double allPayment = totalPayment(productInformation);

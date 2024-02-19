@@ -83,6 +83,8 @@ public class HelloWorld { *//클래스 선언부* <br>
  - 매개변수, 인자
  - 메서드 오버로딩
 10. 클래스
+ - 클래스를 선언할 떄 앞 스펠링이 대문자로 해야함
+
 ## 메서드 정의
   - 제어자(Modifier) : public, static
   - 리턴 타입 (Return Type) : 메서드가 실행된 뒤 반황 되는 타입

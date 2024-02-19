@@ -5,7 +5,7 @@ public class Ex7 {
     public static void main(String[] args) {
 
         Rectangle rectangle = new Rectangle();
-        rectangle.width = 10;
+        rectangle.width = 5;
         rectangle.height = 10;
 
         int area = rectangle.calculateArea();

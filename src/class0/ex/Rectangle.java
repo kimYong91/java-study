@@ -2,8 +2,8 @@ package class0.ex;
 
 public class Rectangle {
     // 필드 : 데이터
-    int width = 5;
-    int height = 8;
+    int width;
+    int height;
 
     // 메서드 : 기능
     int calculateArea() {

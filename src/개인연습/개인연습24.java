@@ -1,5 +1,7 @@
 package 개인연습;
 
+import java.util.Scanner;
+
 public class 개인연습24 {
      /*
         문제: 간단한 은행 계좌 관리 시스템 설계
@@ -14,6 +16,15 @@ public class 개인연습24 {
 
         2단계: 메인 메서드에서 해당 틀래스를 생성하고 사용해보세요
          */
+
+    public static void main(String[] args) {
+        BankAccount bankAccount = new BankAccount();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("계좌번호 : ");
+        bankAccount.accountNumber = scanner.next();
+        System.out.println("");
+    }
+
 
 
 }

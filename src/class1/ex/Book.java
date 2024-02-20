@@ -15,7 +15,7 @@ public class Book {
 
 
     // 생성자: 모든 필드를 매개변수로 받아 초기화하는 생성자를 작성하세요.
-    Book(String title, String author, String isbn, boolean isAvailable) {
+    public Book(String title, String author, String isbn, boolean isAvailable) {
         this.title = title;
         this.author = author;
         this.isbn = isbn;
@@ -23,7 +23,7 @@ public class Book {
     }
 
     // title, author 만 매개변수로 받아 초기화하는 생성자를 작성하세요.
-    Book(String title, String author) {
+    public Book(String title, String author) {
         this.title = title;
         this.author = author;
     }
@@ -37,22 +37,20 @@ public class Book {
     printInfo(): 현재 도서의 상태정보를 출력하는 메서드를 만들어보세요.
      */
     boolean borrowBook() {
-        if (isAvailable) {
+        if (isAvailable == true) {
             System.out.println("대여 가능합니다.");
             isAvailable = false;
-        } if (isAvailable == false)
+        } else  {
             System.out.println("대여 중 입니다.");
-        return isAvailable;
-    }
-    boolean returnBook() {
-        if (isAvailable) {
-            System.out.println("반납하였습니다.");
-            isAvailable = true;
         }
         return isAvailable;
     }
+    void returnBook() {
+        isAvailable = true;
+            System.out.println("반납하였습니다.");
 
-//    String printInfo() {
-//        if
-//    }
+        }
+    void printInfo() {
+        System.out.println("책 : " + title + " 저자 :" + author +" 국제표준도서번호 : "+ isbn + " 대여 상태 : "+ isAvailable);
+    }
 }

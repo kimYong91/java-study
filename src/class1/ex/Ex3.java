@@ -25,6 +25,9 @@ public class Ex3 {
         Book book = new Book("책", "홍길동", "asdf", true);
         Book book1 = new Book("책1", "임꺽정", "asdf", false);
 
+        System.out.println();
+
+
 
 
     }

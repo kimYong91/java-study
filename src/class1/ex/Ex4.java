@@ -7,47 +7,48 @@ public class Ex4 {
       this()를 활용해서 중복 코드를 제거해보세요 .
     2. main 메서드에서 Board 객체를 생성하는 네 가지 방법을 모두 사용해보세요.
      */
-    public static void main(String[] args) {
+//    public static void main(String[] args) {
+//
+//    }
+//}
 
-    }
-}
+    class Board {
+        String title;
+        String content;
+        String writer;
+        String date;
+        int hitCount;
 
-class Board {
-    String title;
-    String content;
-    String writer;
-    String date;
-    int hitCount;
+        Board(String title, String content) {
+            this.title = title;
+            this.content = content;
+            this.writer = "로그인한 회원아이디";
+            this.date = "현재 컴퓨터 날짜";
+            this.hitCount = 0;
+        }
 
-    Board(String title, String content) {
-        this.title = title;
-        this.content = content;
-        this.writer = "로그인한 회원아이디";
-        this.date = "현재 컴퓨터 날짜";
-        this.hitCount = 0;
-    }
+        Board(String title, String content, String writer) {
+            this.title = title;
+            this.content = content;
+            this.writer = writer;
+            this.date = "현재 컴퓨터 날짜";
+            this.hitCount = 0;
+        }
 
-    Board(String title, String content, String writer) {
-        this.title = title;
-        this.content = content;
-        this.writer = writer;
-        this.date = "현재 컴퓨터 날짜";
-        this.hitCount = 0;
-    }
+        Board(String title, String content, String writer, String date) {
+            this.title = title;
+            this.content = content;
+            this.writer = writer;
+            this.date = date;
+            this.hitCount = 0;
+        }
 
-    Board(String title, String content, String writer, String date) {
-        this.title = title;
-        this.content = content;
-        this.writer = writer;
-        this.date = date;
-        this.hitCount = 0;
-    }
-
-    public Board(String title, String content, String writer, String date, int hitCount) {
-        this.title = title;
-        this.content = content;
-        this.writer = writer;
-        this.date = date;
-        this.hitCount = hitCount;
+        public Board(String title, String content, String writer, String date, int hitCount) {
+            this.title = title;
+            this.content = content;
+            this.writer = writer;
+            this.date = date;
+            this.hitCount = hitCount;
+        }
     }
 }

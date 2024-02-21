@@ -18,11 +18,10 @@ public class 개인연습24 {
          */
 
     public static void main(String[] args) {
-        BankAccount bankAccount = new BankAccount();
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("계좌번호 : ");
-        bankAccount.accountNumber = scanner.next();
-        System.out.println("");
+            BankAccount bankAccount = new BankAccount();
+
+            bankAccount.accountCreate();
+        bankAccount.printMenu();
     }
 
 

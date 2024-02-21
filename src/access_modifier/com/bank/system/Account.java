@@ -12,8 +12,9 @@ public class Account {
     }
 
     // 입금, 기능 : 잔액에 금액을 추가
-    public void deposit(double amount) {
+    public double deposit(double amount) {
         balance += amount;
+        return amount;
     }
 
     // 출금. 잔액보다 많은 금액을 출금하려고 하면 출금을 거부해야 함.
@@ -24,6 +25,6 @@ public class Account {
             System.out.println("잔액이 부족합니다.");
             return; // 실행하지 않고 탈출하라
         }
-            amount -= balance;
+        balance -= amount; // balance = balance - amount
         }
     }

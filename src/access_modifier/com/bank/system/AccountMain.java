@@ -6,16 +6,16 @@ public class AccountMain {
 
         double balance = account.getBalance();
         System.out.println("잔액 : " + balance);
-
-
         account.deposit(1000);
-        System.out.println("입금하였습니다.");
-        System.out.println("잔액 : " + balance);
+        double won = account.deposit(1000);
+
+        System.out.println(won + "원 입금하였습니다.");
+        System.out.println("잔액 : " + account.getBalance());
 
 
         account.withdraw(900);
         System.out.println("출금하였습니다.");
-        System.out.println("잔액 : " + balance);
+        System.out.println("잔액 : " + account.getBalance());
     }
 
 }

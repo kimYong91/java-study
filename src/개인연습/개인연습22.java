@@ -40,9 +40,10 @@ public class 개인연습22 {
                 orders[i] = totalProductInformation(productName, price, quantity); // 정보를 창고에 둘었음
             }
 
-
             totalProductOrders(orders);
-            System.out.println("총 결제 금액 : " + getTotalPayment(orders));
+
+            double TotalPayment = getTotalPayment(orders);
+            System.out.println("총 결제 금액 : " + TotalPayment);
 
         }
         // 주문 받은 것 보여주는 창 생성

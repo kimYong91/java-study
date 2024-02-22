@@ -4,19 +4,14 @@ public class Ex1 {
 
     public static void main(String[] args) {
 
-        System.out.println("======================");
-        Book book = new Book();
-        book.title = "The Lord of the Rings";
-        book.author = "J.R.R.";
-        book.year = 1954;
-        book.displayInfo();
+        Book book = new Book("The Lord of the Rings", "J.R.R.", 1954);
 
-        ReferenceBook referenceBook = new ReferenceBook();
-        referenceBook.title = "Math Handbook";
-        referenceBook.author = "John Doe";
-        referenceBook.year = 1999;
-        referenceBook.Field = "Mathematics";
+        ReferenceBook referenceBook = new ReferenceBook("Math Handbook", "John Doe", 1999, "Mathematics");
+
+        book.displayInfo();
         referenceBook.displayInfo();
+
+
     }
 
 

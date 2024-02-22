@@ -64,7 +64,8 @@ public class BankAccount {
             System.out.println("1. 입금");
             System.out.println("2. 출금");
             System.out.println("3. 잔액 조회");
-            System.out.println("4. 종료");
+            System.out.println("4. 달러 환전");
+            System.out.println("5. 종료");
             System.out.print("원하시는 서비스를 선택하세요 : ");
             long num = scanner.nextInt();
             long resurt = 0;
@@ -85,6 +86,9 @@ public class BankAccount {
                 balanceCheck();
                 continue;
             } else if (num == 4) {
+                exchange(this.num);
+                continue;
+            }else if (num == 5) {
                 System.out.println("종료합니다.");
                 break;
             }
@@ -107,6 +111,22 @@ public class BankAccount {
     }
     static void balanceCheck () {
         System.out.println("잔액 : " + balance + "원 입니다.");
+    }
+    double exchange(long num) {
+        Scanner scanner = new Scanner(System.in);
+        if (num < balance) {
+            System.out.println("금액이 부족합니다. 환전할 수 없습니다.");
+        } else {
+            int exchangeRate = (int) ((Math.random() * 1700) + 1000);
+            System.out.println("환율 : " + exchangeRate);
+            System.out.println("원" + " = " + "달러");
+            System.out.println("환전하실 금액을 적어 주세요");
+            this.num = scanner.nextLong();
+            num =  this.num / exchangeRate;
+            System.out.println(num + "달러 환전 되셨습니다.");
+            balance = balance - num;
+        }
+        return balance;
     }
 
 }

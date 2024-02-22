@@ -1,5 +1,7 @@
 package 개인연습.com.library.management;
 
+import access_modifier.com.library.management.Book;
+
 public class Library {
     private Book[] books;       // 직원만 손댈수 있는 책장
     private int index = 0;      // 책장에 보관된, 할 책

@@ -12,7 +12,7 @@ public class SuperClass extends GrandClass {
     // 생성자 오버로딩 overloading
     public SuperClass(int value, String str) {
         super(); // 매개변수 없는 부모 생성자 (생략 가능)
-        System.out.println("아버지 생성자 " + value + str);
+        System.out.println("부모 클래스 생성자 " + value + str);
     }
 
 }

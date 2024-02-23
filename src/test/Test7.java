@@ -9,3 +9,5 @@ public class Test7 {
         cart.addItem(item1);
     }
 }
+// 정상실행 안됨
+// 접근제어 안함

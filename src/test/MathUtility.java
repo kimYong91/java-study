@@ -23,7 +23,7 @@ public class MathUtility {
     public void factorial(int b) {
         int sum = 1;
         for (int i = 1; i <= b; i++) {
-            sum += i * b;
+            sum *= i;
         }
         System.out.println("Factorial of " + b + " : " + sum);
     }

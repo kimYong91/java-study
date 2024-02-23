@@ -22,7 +22,8 @@ public class 개인연습5 {
             win = B;
         } else {
             win = A;
-        } if (win < C) {
+        }
+        if (win < C) {
             System.out.println("WIN : " + C);
         } else if (win > B && win > C) {
             System.out.println("WIN : " + A);

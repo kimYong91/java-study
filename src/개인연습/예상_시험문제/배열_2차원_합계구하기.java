@@ -2,13 +2,15 @@ package 개인연습.예상_시험문제;
 
 public class 배열_2차원_합계구하기 {
     public static void main(String[] args) {
-        int[][] num = {{1,2}, {3,4}, {5,6}};
+        int[][] number = {{10, 20, 30}, {20, 30, 40}, {50, 30, 40}};
         int sum = 0;
-        for (int i = 0; i < num.length; i++) {
-            for (int j = 0; j < num[i].length; j++) {
-                sum += num[i][j];
+        for (int i = 0; i < number.length; i++) {
+            for (int j = 0; j < number[i].length; j++) {
+                sum += number[i][j];
             }
+
         }
-        System.out.println(sum);
+        System.out.println("합계 : " + sum);
     }
+
 }

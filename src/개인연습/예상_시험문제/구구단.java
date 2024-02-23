@@ -10,15 +10,15 @@ public class 구구단 {
             for (int j = 1; j <= 9; j++) {
                 System.out.println(i + " * " + j + " = " + (i*j));
             }
-
         }
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("정수 : ");
-        int num = scanner.nextInt();
-            System.out.println(num + "단");
-            for (int j = 1; j <= 9; j++) {
-                System.out.println(num + "*" + j + "=" + (num*j));
-            }
+        int a = scanner.nextInt();
+
+        for (int i = 1; i <= 9; i++) {
+            System.out.println(a + " * " + i + " = " + (a*i));
+        }
     }
 
 

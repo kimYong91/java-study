@@ -1,8 +1,6 @@
 package polymorphism.ex.ex4;
 
-import java.security.spec.RSAOtherPrimeInfo;
-
-public class Gingerbread extends Cookie {
+public class GingerBread extends Cookie {
     @Override
     public void run() {
         System.out.println("진저브레드 맨이 달립니다!");

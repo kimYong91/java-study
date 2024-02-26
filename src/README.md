@@ -82,17 +82,21 @@ public class HelloWorld { *//클래스 선언부* <br>
 8. 배열
  - 배열 선언, 배열 초기화, 배열 길이
  - 다차원 배열
- - 향상된 for문
+ - 향상된 for문 
+   [(int i = 0; i = num; i++) -> (int i : num)]
 9. 메서드
  - 메서드 선언, 메서드 호출
  - 리턴값, 리턴 타입
- - 매개변수, 인자
- - 메서드 오버로딩
+ - 매개변수(parameter), 인자(argument)
+ - 메서드 오버로딩(overloading)
 10. 클래스
  - 클래스를 선언할 떄 앞 스펠링이 대문자로 해야함
  - 객체지향 프로그래밍
  - 필드, 생성자, 메서드
- - 패키지
+ - 패키지, 접근 제어자
+ - static, 인스턴스 멤버와 정적 멤버
+ - final, 싱글톤
+ - 캡슐화, 상속, 다형성, 추상화
 
 ## 메서드 정의
   - 제어자(Modifier) : public, static
@@ -284,6 +288,7 @@ public class HelloWorld { *//클래스 선언부* <br>
 
     - 부모 클래스(Super Class) : 상속을 통해 다른 클래스에 필드와 메서드를 제고
     - 자식 클래스(Sup Class) : 부모 클래스로부터 필드와 메서드를 상속받는 클래스
+    -
 
     - "is-a"관계를 모델링한다.
         - Dog is a Animal. : Dog클래스는 Animal클래스에서 상속 받음.
@@ -309,3 +314,4 @@ public class HelloWorld { *//클래스 선언부* <br>
     - 메서드 오버로딩(Overloading)과 오버라이딩(Overriding)의 차이.
         - 오버로딩 : 같은 이름의 메서드를 여러개 정의하는 것.
         - 오버라이딩 : 하위 클래스에서 상위 클래스 메서드를 재정의 하는 것
+    

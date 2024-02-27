@@ -15,5 +15,11 @@ public class Main {
         second.commonMethod();
         //second.firstMethod();
 
+
+        // 인터페이스 다중 구현 가능 : 모든 메서드 구현하여 사용
+        ImplClass implClass = new ImplClass();
+        implClass.firstMethod();
+        implClass.secondMethod();
+        implClass.commonMethod();
     }
 }

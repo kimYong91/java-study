@@ -11,7 +11,7 @@ public class 별만들기_답지 {
 
         for (int line1 = 0; line1 < enteredNumber; line1 += 2) {
             for (int numberOfBlank1 = enteredNumber; numberOfBlank1 > line1; numberOfBlank1 -= 2) {
-                System.out.print(" ");
+                System.out.print("-");
             }
             for (int numberOfStar1 = 0; numberOfStar1 <= line1; numberOfStar1++) {
                 System.out.print("*");

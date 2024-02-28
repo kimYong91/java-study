@@ -1,4 +1,4 @@
-package 개인연습.예상_시험문제;
+package 개인연습.예상_시험문제.firstTime;
 
 public class 상품주문하는_클래스만들기 {
 

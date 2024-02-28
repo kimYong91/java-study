@@ -1,6 +1,11 @@
 package polymorphism.interface0.ex.ex1;
 
+import polymorphism.interface0.car.poly.Car;
+
 public class Ex1 {
+
+
+
     public static void main(String[] args) {
         MP3Player mp3Player = new MP3Player();
         CDPlayer cdPlayer = new CDPlayer();
@@ -23,5 +28,16 @@ public class Ex1 {
             playable.pause();
             playable.stop();
         }
+
+        System.out.println("===========");
+
+
+        Played played = new Played();
+        Playable cdPlayer2 = new CDPlayer();
+        played.setPlayable(cdPlayer2);
+        played.plying();
+        Playable mp3Player2 = new MP3Player();
+        played.setPlayable(mp3Player2);
+        played.plying();
     }
 }

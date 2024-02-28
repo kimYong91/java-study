@@ -1,14 +1,12 @@
 package polymorphism.interface0.ex.ex3;
 
-public class Healer implements Healable{
-
-    String name;
-
-    Healer (String name) {
-        this.name = name;
+public class Healer extends Character implements Healable {
+    public Healer(String name) {
+        super(name);    // 추상 클래스(부모 클래스에서 호출)
     }
 
-    public void heal(Attackable attackable) {
-        System.out.println("힐러은(는) " + attackable + "을(를) 치유합니다. 치유의 빛!");
+    @Override
+    public void heal(Character character) {
+        System.out.println(name + "은(는) "+ character.name +"을(를) 치유합니다. 치유의 빛!");
     }
 }

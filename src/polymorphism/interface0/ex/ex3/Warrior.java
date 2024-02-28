@@ -1,15 +1,12 @@
 package polymorphism.interface0.ex.ex3;
 
-public class Warrior implements Attackable{
-
-    String name;
-
-    Warrior (String name) {
-        this.name = name;
+public class Warrior extends Character implements Attackable {
+    public Warrior(String name) {
+        super(name);
     }
 
-
-    public void attack(Attackable attackable) {
-        System.out.println("전사이(가) " + attackable + "을(를) 공격합니다. 강한 공격!");
+    @Override
+    public void attack(Character character) {
+        System.out.println(name + "이(가) "+ character.name +"을(를) 공격합니다. 강한 공격!");
     }
 }

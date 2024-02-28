@@ -12,7 +12,7 @@ public class 역삼각형 {
             for (int j = 0; j <= i; j +=2) {
                 System.out.print("-");
             }
-            for (int j = 1; j <= num; num--) {
+            for (int j = 1; j <= num -i ; j++) {
                 System.out.print("*");
             }
             System.out.println();

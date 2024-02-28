@@ -2,7 +2,7 @@ package polymorphism.interface0.ex.ex2;
 
 public class MobilePay implements Payment{
     @Override
-    public void payment(double amount) {
+    public void pay(double amount) {
         System.out.println("모바일 결제로 " + amount + "원 결제되었습니다.");
     }
 }

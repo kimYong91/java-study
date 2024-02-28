@@ -19,14 +19,14 @@ public class 별만들기_답지 {
             System.out.println();
         }
 
-//        for (int line2 = 2; line2 < enteredNumber; line2 += 2) {
-//            for (int numberOfBlank2 = 0; numberOfBlank2 <= line2; numberOfBlank2 += 2) {
-//                System.out.print(" ");
-//            }
-//            for (int numberOfStar2 = enteredNumber; numberOfStar2 > line2; numberOfStar2--) {
-//                System.out.print("*");
-//            }
-//            System.out.println();
-//        }
+        for (int line2 = 2; line2 < enteredNumber; line2 += 2) {
+            for (int numberOfBlank2 = 0; numberOfBlank2 <= line2; numberOfBlank2 += 2) {
+                System.out.print(" ");
+            }
+            for (int numberOfStar2 = enteredNumber; numberOfStar2 > line2; numberOfStar2--) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
     }
 }

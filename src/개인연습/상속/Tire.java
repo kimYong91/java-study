@@ -4,9 +4,20 @@ public abstract class Tire {
 
     String location;
 
-    public boolean roll () {
+    int maxRotation;
 
-        return true;
+    int accumulatedRotation = 0;
+
+
+    public boolean roll () {
+        accumulatedRotation++;
+        if (maxRotation > accumulatedRotation) {
+            System.out.println(location + "쪽 타이어 펑크");
+            return false;
+        } else{
+            System.out.println(location + "쪽 타이어 펑크");
+            return false;
+        }
     }
 
 }

@@ -8,13 +8,13 @@ public class Try1 {
         // 1. try 블록
         try {
             // 예외가 발생할 가능성이 있는 코드를 포함
-            // 블록 내부의 코드를 싱생하다가, 예외가 감지하면
-            // 즉시 시랭을 중단하고 catch 블록으로 넘어감
+            // 블록 내부의 코드를 생성하다가, 예외가 감지되면
+            // 즉시 실행을 중단하고 catch 블록으로 넘어감
         } catch (IndexOutOfBoundsException e1) {
             // 2. catch 블록 => ()이 안에 특정 유형의 예외를 작성 * e는 다른것을 적어도 됨.
             // 특정 유형의 예외를 처리
             // try 블럭에서 발생한 예외와 일치하는 catch 블록이 실행
-            // 예외발생시 처리할 복구 코드, 로그 코드
+            // 예외발생시 처리할 복구 코드, 로그 코드 * 예) System.out.println("코드 에러 발생"); 등
         } catch (RuntimeException e2) {
             // catch 블록은 try 블록 이후에 여러개가 올 수 있다.
         } finally {

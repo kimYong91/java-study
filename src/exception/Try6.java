@@ -1,6 +1,6 @@
 package exception;
 
-public class Tyr6 {
+public class Try6 {
     public static void main(String[] args) {
         // NumberFormat
         String str1 = "1000";

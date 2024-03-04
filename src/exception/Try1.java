@@ -7,7 +7,7 @@ public class Try1 {
 
         // 1. try 블록
         try {
-            // 에외가 발생할 가능성이 있는 코드를 포함
+            // 예외가 발생할 가능성이 있는 코드를 포함
             // 블록 내부의 코드를 싱생하다가, 예외가 감지하면
             // 즉시 시랭을 중단하고 catch 블록으로 넘어감
         } catch (IndexOutOfBoundsException e1) {

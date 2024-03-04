@@ -10,9 +10,10 @@ public class KumhoTire extends Tire{
 
     @Override
     public boolean roll () {
-        accumulatedRotation++;
+
         if (this.maxRotation > accumulatedRotation) {
             System.out.println(location + " 금호 타이어 정상, 수명 : " + (this.maxRotation - accumulatedRotation));
+            accumulatedRotation++;
             return true;
         } else{
             System.out.println(location + " 금호 타이어 펑크");

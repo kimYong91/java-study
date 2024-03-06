@@ -1,4 +1,4 @@
-package library.lang.ex1;
+package library.lang.ex.ex1;
 
 public class Equals {
     // Object 클래스의 equals 메서드는 객체의 동등성을 비교하는데 사용

@@ -1,4 +1,4 @@
-package library.lang.ex4;
+package library.lang.ex.ex4;
 
 import java.util.Objects;
 

@@ -1,4 +1,4 @@
-package library.lang.ex1;
+package library.lang.ex.ex1;
 
 public class BankAccount {
     //은행 계좌 정보를 관리하는 BankAccount 클래스가 있다고 가정해 보겠습니다.

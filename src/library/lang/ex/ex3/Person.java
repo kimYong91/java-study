@@ -1,4 +1,4 @@
-package library.lang.ex3;
+package library.lang.ex.ex3;
 
 public class Person {
     // hashCode() 메서드와 equals() 메서드를 오버라이딩하여 구현하세요.

@@ -22,8 +22,7 @@ public class StringMethod6 {
         String findText = "꽃이";
         String substring = sentence.substring(
                 sentence.indexOf(findText),         // 시작 인덱스
-                sentence.indexOf(findText) + findText.length());
-        // 끝 인덱스(시작인덱스 + 길이)
+                sentence.indexOf(findText) + findText.length()); // 끝 인덱스(시작인덱스 + 길이)
         System.out.println(substring);
 
         // replace : 치환, 지정된 문자열에서 다른 문자를 교체한 새 문자열 반환

@@ -28,7 +28,7 @@ public class StringMethod1 {
 
         // 4. trim : 문자열 시작과 끝 좌우의 white space 제거 (내부 공백은 제거하지 않음)
         String str = " \t 입력된 정보   아하하  \n";
-        // 기존 문자열을 변경하지 않고 새로운 문자열 객페를 생성하여 리턴한다.
+        // 기존 문자열을 변경하지 않고 새로운 문자열 객체를 생성하여 리턴한다.
         String trim = str.trim();
         System.out.println("기존 문자열: " + str);
         System.out.println("trim문자열: " + trim);

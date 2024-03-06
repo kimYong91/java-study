@@ -83,7 +83,8 @@ public class HelloWorld { *//클래스 선언부* <br>
    - 배열 선언, 배열 초기화, 배열 길이
    - 다차원 배열
    - 향상된 for문 
-     [(int i = 0; i = num; i++) -> (int i : num)]
+     [(int i = 0; i = num; i++) -> (int i : num)] 
+     - 첫번째 단축기 = fori, 두 번쨰의 향상된 for문 단축기 = iter
 9. 메서드
    - 메서드 선언, 메서드 호출
    - 리턴값, 리턴 타입

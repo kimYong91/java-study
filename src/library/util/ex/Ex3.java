@@ -1,5 +1,6 @@
 package library.util.ex;
 
+import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.Scanner;
 
@@ -7,19 +8,16 @@ public class Ex3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("원금 : ");
-        String principal = scanner.next();
+        BigDecimal principal = scanner.nextBigDecimal();
         System.out.print("연이율 : ");
-        String annualInterestRate = scanner.next();
+        BigDecimal annualInterestRate = scanner.nextBigDecimal();
         System.out.print("기간 : ");
-        String termInYears = scanner.next();
+        int termInYears = scanner.nextInt();
+        BigDecimal one = new BigDecimal("1");
 
-        for (int i = 0; i < ; i++) {
-            
-        }annualInterestRate.length()-1
+        BigDecimal totalAmount = annualInterestRate.add(one).pow(termInYears).multiply(principal);
 
-        System.out.printf("원금 : %s원\n연이율 : %s\n기간 : %s년", principal, annualInterestRate, termInYears);
-
-
+        System.out.printf("원금 : %s원\n연이율 : %s\n기간 : %s년\n최종금액 : %s", principal, annualInterestRate, termInYears, totalAmount);
     }
 }
 /*

@@ -1,6 +1,41 @@
 package exception.ex.ex5;
 
+import java.util.Scanner;
+
 public class Ex5 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("비밀번호를 입력하세요: ");
+        String password = scanner.nextLine();
+
+        try {
+            validatePassword(password); // 예외 발생 코드 => catch
+            // 예외가 발생하지 않을 경우
+            System.out.println("비밀번호가 성공적으로 설정되었습니다.");
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    private static void validatePassword(String password) {
+        StringBuilder exceptionMessage = new StringBuilder();
+        if (password.length() < 8) {
+            exceptionMessage.append("비밀번호는 최소 8자 이상이어야 합니다.\n");
+            // throw new IllegalArgumentException("비밀번호는 최소 8자 이상이어야 합니다.");
+        }
+        if (!password.matches(".*[0-9].*")) {
+            exceptionMessage.append("비밀번호에는 최소 하나의 숫자가 포함되어야 합니다.\n");
+            // throw new IllegalArgumentException("비밀번호에는 최소 하나의 숫자가 포함되어야 합니다.");
+        }
+        if (!password.matches(".*[A-Z].*")) {
+            exceptionMessage.append("비밀번호에는 최소 하나의 대문자가 포함되어야 합니다.\n");
+            // throw new IllegalArgumentException("비밀번호에는 최소 하나의 대문자가 포함되어야 합니다.");
+        }
+        if (!exceptionMessage.isEmpty()) {
+            throw new IllegalArgumentException(exceptionMessage.toString());
+        }
+
+    }
 }
 /*
 연습문제 5: 비밀번호 검증 시스템

@@ -1,4 +1,4 @@
-package library.lang;
+package library.lang.System;
 
 public class SystemTime {
     public static void main(String[] args) throws InterruptedException {

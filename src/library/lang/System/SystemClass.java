@@ -1,4 +1,4 @@
-package library.lang;
+package library.lang.System;
 
 import java.io.InputStream;
 import java.io.PrintStream;

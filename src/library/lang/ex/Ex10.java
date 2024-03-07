@@ -1,6 +1,6 @@
 package library.lang.ex;
 
-public class ex10 {
+public class Ex10 {
     public static void main(String[] args) {
         String data = "김철수,30,kimcs@gmail.com;이영희,25,younghee@naver.com;박보검,22,bogum@daum.net;김민아,35,mina@gmail.com";
 

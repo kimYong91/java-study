@@ -17,7 +17,7 @@ public class Ex3 {
 
         BigDecimal totalAmount = annualInterestRate.add(one).pow(termInYears).multiply(principal);
 
-        System.out.printf("원금 : %s원\n연이율 : %s\n기간 : %s년\n최종금액 : %s", principal, annualInterestRate, termInYears, totalAmount);
+        System.out.printf("원금 : %s원\n연이율 : %s\n기간 : %s년\n최종금액 : %,.2f", principal, annualInterestRate, termInYears, totalAmount);
     }
 }
 /*

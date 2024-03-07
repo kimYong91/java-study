@@ -1,4 +1,4 @@
-package library.lang;
+package library.lang.toString_equals_hashCode;
 
 public class JavaLang {
     // java.base 모듈

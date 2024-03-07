@@ -1,7 +1,6 @@
-package library.lang;
+package library.lang.toString_equals_hashCode;
 
 import java.util.HashMap;
-import java.util.Objects;
 
 public class Key {
     int number;

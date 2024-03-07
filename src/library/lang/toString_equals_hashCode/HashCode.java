@@ -1,4 +1,4 @@
-package library.lang;
+package library.lang.toString_equals_hashCode;
 
 import java.util.Objects;
 

@@ -15,7 +15,12 @@ public class Ex3 {
         int termInYears = scanner.nextInt();
         BigDecimal one = new BigDecimal("1");
 
-        BigDecimal totalAmount = annualInterestRate.add(one).pow(termInYears).multiply(principal);
+        BigDecimal totalAmount = annualInterestRate
+                                .add(one)
+                                .pow(termInYears)
+                                .multiply(principal);
+                // one은 BigInteger.ONE으로 대체 가능하다
+
 
         System.out.printf("원금 : %s원\n연이율 : %s\n기간 : %s년\n최종금액 : %,.2f", principal, annualInterestRate, termInYears, totalAmount);
     }

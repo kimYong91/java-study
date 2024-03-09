@@ -1,6 +1,5 @@
 package 개인연습.com.library.management;
 
-import access_modifier.com.library.management.Book;
 
 public class Library {
     private Book[] books;       // 직원만 손댈수 있는 책장
@@ -18,8 +17,9 @@ public class Library {
     public void listBooks() {
         // 도서관에 있는 모든 도서 출력
         System.out.println("도서과에 보관중인 도서 목록");
-
-
-
+        for (int i = 0; i < index; i++) {
+            System.out.printf("%d번. 제목: %s, 저자: %s\n", i+1, books[i].getTitle(), books[i].getAuthor());
+        }
+        System.out.printf("총 %s권\n", index);
     }
 }

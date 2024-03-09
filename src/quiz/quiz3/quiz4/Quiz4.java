@@ -6,18 +6,15 @@ public class Quiz4 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("이메일 주소를 입력하세요: ");
-        String email = scanner.nextLine();
 
         try {
-
-        } catch () {
+            String email = scanner.nextLine();
+            InvalidEmailException.checkEmail(email);
+            System.out.println("이메일이 유효 합니다.");
+        } catch (InvalidEmailException e) {
+            System.out.println(e.getMessage());
         }
 
-    }
-    public static void CheckEmail(String email) {
-        if (email.contains("@")){
-            System.out.println("유");
-        }
     }
 }
 /*

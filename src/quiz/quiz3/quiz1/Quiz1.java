@@ -1,11 +1,12 @@
 package quiz.quiz3.quiz1;
 
+
 public class Quiz1 {
     public static void main(String[] args) {
         PaymentProcessor processor = new PaymentProcessor();
         Payment[] payments = {new MobilePay(), new CreditCard(), new BankTransfer()};
-        processor.payed(payments, 1000);
 
+        processor.Process(payments, 1000);
     }
 }
 /*

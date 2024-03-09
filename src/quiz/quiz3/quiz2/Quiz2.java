@@ -1,6 +1,21 @@
 package quiz.quiz3.quiz2;
 
+
 public class Quiz2 {
+    public static void main(String[] args) {
+        Button button = new Button();
+        button.click();
+
+        button.setListener(new OnClickListener() {
+            @Override
+            public void onClick() {
+                System.out.println("버튼이 클릭 되었습니다.");        
+                // 질문 : setListener 에서 this.listener = listener;는 왜 필요 한지, OnClickListener 인터페이스를 불러와 오버라이딩 할 목적만 수행하는것 아닌가 그러면  
+                // public void setListener(OnClickListener listener) {} 이렇게만 해도 되는거 아닌가 => 막상해보니 출력되지 않음
+            }
+        });
+        button.click();
+    }
 }
 /*
 사용자 정의 이벤트 리스너 구현하기

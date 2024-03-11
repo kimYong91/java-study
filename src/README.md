@@ -127,6 +127,25 @@ public class HelloWorld { *//클래스 선언부* <br>
     - 본문이 선언과 동시에 정의-> 인터페이스 구현
     - 람다식으로 연결
 19. 예외처리
+    - Error, Exception
+    - checked 예외(compile), unchecked 예외 (runtime)
+    - try-catch-finally
+    - throw 예외 떠넘기기, throw new 예외 발생시키기, 사용자 정의 예외
+20. Object 클래스
+    - 모든 클래스의 조상
+    - toString, equals, hashCode, getClass
+21. String 클래스
+    - 문자열 : immutable
+    - 문자열 메서드 : chatAt, indexOf, length
+    - replace, substring, trim, split,toLowerCase, toUpperCase
+    - StringBuilder, StringBuffer (변경 가능하게 문자열을 조작 mutable)
+22. Class 클래스
+    - 클래스에 대한 메타 정보를 가져옴, 조작, 관리 => 리플렉션
+23. Math, Random 클래스
+24. Wrapper 클래스
+    - 기본 타입을 객체로 포장하는 클래스
+25. 날짜와 시간 관련 클래스
+    - Date, Calendar, SimpleDateFormat
 
 ## 메서드 정의
     - 제어자(Modifier) : public, static
@@ -431,3 +450,10 @@ public class HelloWorld { *//클래스 선언부* <br>
                 2. Unchecked Exception : 실행 시점 (Runtime)에 발생하는 예외
                     - 주로 RuntimeException클래스에서 상속받음
 
+## Generic의 장점
+    1. 타입 안전성(Type Sagety)를 가짐
+        - 컴파일 시점에 타입 체크를 수행할 수 있어. ClassCastException을 방지
+    2. 코드 재사용성이 향상
+        - 다양한 타입의 데이터에 대해 재사용 가능하여, 코드의 양을 줄인다.
+    3. 타입 캐스팅 감소
+        - 캐스팅 연산자를 사용하지 않아서 깔끔하고 가독성 향상

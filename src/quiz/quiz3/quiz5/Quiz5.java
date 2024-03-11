@@ -1,6 +1,16 @@
-package quiz.quiz3;
+package quiz.quiz3.quiz5;
 
 public class Quiz5 {
+    public static void main(String[] args) {
+        Product apple = new Product("apple", 2.5, 10);
+        Product apple1 = new Product("apple", 2.5, 10);
+
+        System.out.println(apple.equals(apple1));
+        System.out.println(apple.hashCode());
+        System.out.println(apple1.hashCode());
+        System.out.println(apple.toString());
+        System.out.println(apple1);
+    }
 }
 /*
 상품 클래스 재정의하기

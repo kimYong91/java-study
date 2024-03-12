@@ -20,9 +20,8 @@ public class Candidate {
 
     @Override
     public String toString() {
-        return "후보자 [" +
-                "이름 : '" + name + '\'' +
-                ", 득표수 : " + votes +
-                ']';
+
+        return "후보자 이름 : " + name + ", 득표수 : " + votes + "\n";
+
     }
 }

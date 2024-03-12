@@ -1,4 +1,4 @@
-package collection;
+package collection.list;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -22,6 +22,7 @@ public class Iterator1 {
         System.out.println("i2 = " + i2);
         Integer i3 = iterator.next();
         System.out.println("i3 = " + i3);
+
 
         // hasNext 메서드 : 순회가 끝났는지 여부를 확인하고 리턴, 탐색할 요소가 없으면 false
         boolean b1 = iterator.hasNext();    // 다음 요소 있음

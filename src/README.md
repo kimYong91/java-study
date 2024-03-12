@@ -153,6 +153,13 @@ public class HelloWorld { *//클래스 선언부* <br>
     - 제네릭 클래스, 제네릭 메서드(리턴 타입 앞에 선언)
     - 제한된 타입 파라미터 <T extends 타입>
     - 와일드 카드 <? extends 타입> <? super 타입>
+    - T : Type
+      E : Element (요소, 컬렉션에 이용)
+      K : Key
+      V : Value
+      N : Number
+      ? : 와일드카드
+      S, U, V : 여러개의 제네릭 타입을 사용해야할 때 추가적 사용
 
 ## 메서드 정의
     - 제어자(Modifier) : public, static

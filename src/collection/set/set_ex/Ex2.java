@@ -14,8 +14,12 @@ public class Ex2 {
                 System.out.println("종료합니다.");
                 break;
             }
+            citySet.add(city.toLowerCase());
         }
-        System.out.println("");
+        for (String s : citySet) {
+            System.out.println(s.substring(0,1).toUpperCase()+s.substring(1).toLowerCase());
+        }
+
     }
 }
  /*

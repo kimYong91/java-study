@@ -1,4 +1,4 @@
-package collection.set.Set_ex;
+package collection.set.set_ex;
 
 import java.util.HashSet;
 import java.util.Random;

@@ -4,7 +4,7 @@ public class Ex3 {
     public static void main(String[] args) {
         VotingSystem votingSystem = new VotingSystem();
         votingSystem.startVoting();
-        votingSystem.printResults();
+
 
     }
 }

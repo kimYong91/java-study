@@ -32,27 +32,37 @@ public class VotingSystem {
         while (true) {
             System.out.println("투표하고 싶은 후보의 번호를 입력하세요 (종료하려면 0을 입력):");
             int choice = scanner.nextInt();
-            switch (choice) {
-                case 1:
-                    candidateList.get(0).receiveVote();
-                    break;
-                case 2:
-                    candidateList.get(1).receiveVote();
-                    break;
-                case 3:
-                    candidateList.get(2).receiveVote();
-                    break;
-                case 4:
-                    candidateList.get(3).receiveVote();
-                    break;
-                default:
-                    System.out.println("잘못 입력 하셨습니다.");
-                    break;
-                case 0:
-                    System.out.println("투표를 종료합니다.");
-                    return;
+//            switch (choice) {
+//                case 1:
+//                    candidateList.get(0).receiveVote();
+//                    break;
+//                case 2:
+//                    candidateList.get(1).receiveVote();
+//                    break;
+//                case 3:
+//                    candidateList.get(2).receiveVote();
+//                    break;
+//                case 4:
+//                    candidateList.get(3).receiveVote();
+//                    break;
+//                default:
+//                    System.out.println("잘못 입력 하셨습니다.");
+//                    break;
+//                case 0:
+//                    System.out.println("투표를 종료합니다.");
+//                    return;
+            if (choice == 0) break;
+            else if (choice > 0 && choice <= candidateList.size()) {
+                int realIndex = choice - 1;
+                // 투표 카운트하기
+                candidateList
+                        .get(realIndex)     // 후보 객체 가져오기
+                        .receiveVote();     // 후보의 투표수 늘리기
+            } else {
+                System.out.println("번호를 맞게 입력해주세요");
             }
         }
+        printResults();
     }
     public void printResults() {
         System.out.println(candidateList.toString());

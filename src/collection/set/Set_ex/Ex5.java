@@ -1,4 +1,4 @@
-package collection.set.ex;
+package collection.set.Set_ex;
 
 import java.util.HashSet;
 import java.util.Objects;

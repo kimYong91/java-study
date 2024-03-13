@@ -1,4 +1,4 @@
-package collection.ex.ex3.다른풀이;
+package collection.list.ex.ex3.다른풀이;
 
 import java.util.ArrayList;
 import java.util.List;

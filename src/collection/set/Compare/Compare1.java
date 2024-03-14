@@ -1,4 +1,4 @@
-package collection.set;
+package collection.set.Compare;
 
 import java.util.TreeSet;
 
@@ -25,7 +25,12 @@ public class Compare1 {
         @Override
         public int compareTo(Person otherPerson) {
             // 나이에 따라서 정렬하고 싶음. (양수(큼), 0(같음), 음수(작음))
-            return this.age - otherPerson.age;  // 나이 기준으로 했기 때문에 같은 나이는 삭제됨
+            int ageCompareTo = this.age - otherPerson.age;
+            if (ageCompareTo == 0) {
+                int nameCompare = this.name.compareTo(otherPerson.name);
+                return nameCompare;
+            }
+            return ageCompareTo;
         }
 
         @Override

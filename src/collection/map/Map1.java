@@ -58,8 +58,7 @@ public class Map1 {
         System.out.println("=========Entry 순회=========");
         // 3. Entry 순회
         for (Map.Entry<String, Integer> entry : map.entrySet()) {
-            System.out.println(entry.getKey() + " => " + entry.getValue());
-            System.out.println(entry); // 사과=1500 toString() 되어있음
+            System.out.println(entry.getKey() + " => " + entry.getValue()); // 사과=1500 toString() 되어있음
         }
 
         // 4. 반복자를 통한 순회

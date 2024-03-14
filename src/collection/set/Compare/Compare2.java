@@ -1,4 +1,4 @@
-package collection.set;
+package collection.set.Compare;
 
 import java.util.Comparator;
 import java.util.TreeSet;
@@ -29,7 +29,6 @@ public class Compare2 {
                 // return o1.age - o2.age;
                 // 이름 비교 : 문자열(Comparable) 필드의 비교 방법을 사용하여 비교
                 return o1.name.compareTo(o2.name);
-                //return o1.age - o2.age;
             }
         };
         // 이름 비교자를 사용한 정렬

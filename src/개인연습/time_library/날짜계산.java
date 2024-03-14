@@ -1,6 +1,21 @@
 package 개인연습.time_library;
 
+import java.time.LocalDate;
+import java.time.Period;
+
 public class 날짜계산 {
+    public static void main(String[] args) {
+        LocalDate localDate = LocalDate.of(2026,6,14);
+        LocalDate localDateNow = LocalDate.now();
+
+        Period period = Period.between(localDate, localDateNow);
+
+        int year = period.getYears();
+        int month = period.getMonths();
+        int day = period.getDays();
+
+
+    }
 }
  /*
     연습 문제 2: 월드컵 개최일까지 남은 시간 계산하기

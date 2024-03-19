@@ -21,6 +21,12 @@ public class Ex5 {
         // 리스트의 각요소에 (Consumer.accept()) 적용
         attendees.forEach(welcome);
 
+//        Predicate<Person> isAdult = new Predicate<Person>() {
+//            @Override
+//            public boolean test(Person person) {
+//                return person.getAge() >= 18;
+//            }
+//        };
         Predicate<Person> isAdult = person -> {return person.getAge() >= 18;}; // 한 줄 짜리기 때문에 리턴, 중괄호는 필요 없어짐
 
         for (Person attendee : attendees) {
@@ -29,6 +35,12 @@ public class Ex5 {
             }
         }
 
+//        Function<Person, String> getNameFunction = new Function<Person, String>() {
+//            @Override
+//            public String apply(Person person) {
+//                return person.getName();
+//            }
+//        };
         Function<Person, String> getNameFunction = Person::getName;  //person -> {return person.getName();};
 
         //Supplier<List<String>> inviteListSupplier = () -> {return new ArrayList<>();};

@@ -16,7 +16,11 @@ public class Ex6 {
             this.reviews = reviews;
         }
 
-        public double getPrice() {
+       public String getName() {
+           return name;
+       }
+
+       public double getPrice() {
             return price;
         }
 
@@ -41,6 +45,14 @@ public class Ex6 {
                 .sorted(Comparator.comparing(Product::getReviews).reversed()
                         .thenComparing(Product::getPrice))
                 .forEach(System.out::println);
+
+
+//        List<Product> resultList = products.stream()
+//                .sorted(Comparator.comparing(Product::getReviews).reversed()
+//                        .thenComparing(Product::getPrice))
+//                .toList();
+//
+//        resultList.forEach(p -> System.out.println(p.getName() + " - $" + p.getPrice() + ", Reviews: " + p.getReviews()));
     }
 }
  /*

@@ -1,7 +1,5 @@
 package stream;
 
-import quiz.quiz3.quiz5.Product;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

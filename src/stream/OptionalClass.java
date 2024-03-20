@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.OptionalDouble;
 
-public class Optional {
+public class OptionalClass {
     public static void main(String[] args) {
         // Optional 클래스
         // Java 8부터 도입, 값이 있거나, 없을 수 있는 컨테이너 객체

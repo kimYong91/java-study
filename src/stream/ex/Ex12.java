@@ -17,18 +17,24 @@ public class Ex12 {
                 new Employee("David", "Manager", 8000)
         );
 
-        int totalSalary = employees.stream()
-                .mapToInt(Employee::salary)
-                .reduce(Integer::sum)
-                .orElse(0);
+//        int totalSalary = employees.stream()
+//                .mapToInt(Employee::salary)
+//                .reduce(Integer::sum)
+//                .orElse(0);
+//        System.out.println("총 급여: " + totalSalary);
+//
+//        Map<String, Double> groupRole = employees.stream()
+//                .collect(Collectors.groupingBy(Employee::role,
+//                        Collectors.averagingInt(Employee::salary)));
+//        System.out.println(groupRole);
+
+        Integer totalSalary = employees.stream()
+                .collect(Collectors.summingInt(Employee::salary));
         System.out.println("총 급여: " + totalSalary);
 
-        Map<String, Double> groupRole = employees.stream()
-                .collect(Collectors.groupingBy(Employee::role,
-                        Collectors.averagingInt(Employee::salary)));
-        System.out.println(groupRole);
-
-
+        Map<String, Double> byRoleSalaryAverage = employees.stream()
+                .collect(Collectors.groupingBy(Employee::role, Collectors.averagingDouble(Employee::salary)));
+        byRoleSalaryAverage.forEach((role, salaryAvg) -> System.out.printf("%s 평균 급여 : %.1f\n", role, salaryAvg)) ;
 
 
     }

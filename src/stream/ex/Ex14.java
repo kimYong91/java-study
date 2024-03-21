@@ -110,6 +110,7 @@ public class Ex14 {
                     3. 특정 연도 이후 출판된, 최소 페이지 이상 책의 제목 출력
                     4. 각 장르별 책의 수 계산
                     5. 가장 많은 책이 출판된 장르 찾기
+                    6. 책 키워드 검색
                     0. 종료
                     실행할 작업을 선택하세요: """
             );
@@ -143,6 +144,10 @@ public class Ex14 {
                 case 5:
                     q5(books);
                     break;
+                case 6:
+                    System.out.printf("검색할 키워드를 입력해주세요. ");
+                    String query = scanner.nextLine();
+                    q6(books, query);
                 case 0:
                     System.out.println("프로그램을 종료합니다.");
                     return;
@@ -172,6 +177,14 @@ public class Ex14 {
                 .map(Map.Entry::getKey)
                 .orElse("잘못된 장르");
         System.out.println("가장 많은 책이 출판된 장르 = " + maxGenre);
+    }
+
+    private static void q6(List<Book> books, String query) {
+        List<Book> list = books.stream().
+                filter(book -> book.title.toLowerCase().contains(query)       // 책의 이름과 저자로 검색
+                        || book.author.toLowerCase().contains(query))
+                .toList();
+        list.forEach(System.out::println);      // 검색된 책의 목록 출력
     }
 
     private static Map<String, Long> q4(List<Book> books) {

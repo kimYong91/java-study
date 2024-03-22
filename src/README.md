@@ -590,7 +590,7 @@ public class HelloWorld { *//클래스 선언부* <br>
     3. Waiting       : 다른 스레드의 작업이 완료되기를 기다리는 상태
     4. Timed Waiting : 지정된 시간만큼 대기하는 상태 sleep
     5. Blocked       : Lock을 보유한 스레드가 있어서 실행이 불가한 상태
-    6. terminted     : 스레드가 작업 완료 되었거나, 예외발생으로 종료된 상태
+    6. terminated     : 스레드가 작업 완료 되었거나, 예외발생으로 종료된 상태
 
     -  스레드를 일지 정지 (Waiting, Timed Waiting) 상태로 보냄
         - wait()
@@ -599,3 +599,12 @@ public class HelloWorld { *//클래스 선언부* <br>
     - 일시정지 상태인 스레드를 실행 상태(Runnable) 이나 종료 상태(Terminated)로 만듬
         - notify()
         - interrupt()
+
+## 동기화
+    - 멀티 스레드 환경에서 일관성, 무결성을 유지하기 위해 동기화 기법을 사용
+    - 경쟁 상태(Race Condition) : 두 개 이상의 스레드가 하나의 자원에 접근하여 서로의 결과에 영향을 미치는 상황
+    - 데드 락(Dead Lock) : 두 개 이상의 스레드가 서로 상대방의 작업 완료를 무한하게 기다리는 상태
+    - 동기화 기법
+        1. synchronized 블럭 : 특정 부분, 특정 객체에 대한 동기화
+        2. synchronized 메서드 : 메서드 전체를 동기화
+        3. volatile 키워드 : 선언된 변수의 최신 값을 모든 스레드가 볼 수 있게(가시성 문제 해결)

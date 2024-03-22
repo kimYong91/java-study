@@ -1,4 +1,4 @@
-package thread.ex;
+package thread.ex.ex1;
 
 import java.util.Random;
 

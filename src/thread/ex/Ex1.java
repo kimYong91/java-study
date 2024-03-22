@@ -13,7 +13,7 @@ public class Ex1 {
 
         System.out.println("========================================================");
 
-        Thread car = new Thread(new Car(10,3));
+        Thread car = new Thread(new Car(3,3));
         car.start();
     }
 }

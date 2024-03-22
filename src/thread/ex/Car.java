@@ -5,6 +5,7 @@ import java.util.Random;
 public class Car extends Thread{
     int max;
     int carNumber;
+//    int finish = new Random();
 
     public Car(int max, int carNumber) {
         this.max = max;
@@ -22,10 +23,11 @@ public class Car extends Thread{
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
-
             }
-
         }
+//        for (int i = 0; i < carNumber; i++) {
+//            System.out.printf("차량 %s이 경주 마침!\n", (i+1));
+//        }
 
 
 

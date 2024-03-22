@@ -592,7 +592,7 @@ public class HelloWorld { *//클래스 선언부* <br>
     5. Blocked       : Lock을 보유한 스레드가 있어서 실행이 불가한 상태
     6. terminated     : 스레드가 작업 완료 되었거나, 예외발생으로 종료된 상태
 
-    -  스레드를 일지 정지 (Waiting, Timed Waiting) 상태로 보냄
+    -  스레드를 일시 정지 (Waiting, Timed Waiting) 상태로 보냄
         - wait()
         - join()
         - sleep()

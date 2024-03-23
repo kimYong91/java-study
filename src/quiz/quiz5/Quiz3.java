@@ -1,6 +1,7 @@
 package quiz.quiz5;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 public class Quiz3 {
@@ -13,6 +14,10 @@ public class Quiz3 {
             int sameWords = word.getOrDefault(words, 0) + 1;
             word.put(words, sameWords);
         }
-        System.out.println(word);
+        for (Map.Entry<String, Integer> stringIntegerEntry : word.entrySet()) {
+            String key = stringIntegerEntry.getKey();
+            Integer value = stringIntegerEntry.getValue();
+            System.out.println(key + " : " + value);
+        }
     }
 }

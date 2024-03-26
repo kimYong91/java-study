@@ -1,11 +1,10 @@
-package io_stram;
+package io_stream;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 
-public class IoStream4 {
+public class IOStream4 {
     public static void main(String[] args) throws IOException {
         // 바이트 배열로 읽기
         InputStream inputStream = new FileInputStream("src/io_stram/text_IoStream1.txt");

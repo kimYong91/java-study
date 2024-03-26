@@ -1,11 +1,10 @@
-package io_stram;
+package io_stream;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
 
-public class IoStream6 {
+public class IOStream6 {
     public static void main(String[] args) throws IOException {
         Reader reader = new FileReader("src/io_stram/text3_IoStream5.txt");
 

@@ -1,11 +1,10 @@
-package io_stram;
+package io_stream;
 
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 
-public class IoStream2 {
+public class IOStream2 {
     public static void main(String[] args) {
         // 바이트를 배열로 출력
         try {

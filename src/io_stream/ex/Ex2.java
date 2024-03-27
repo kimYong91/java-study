@@ -27,20 +27,19 @@ public class Ex2 {
         Scanner scanner = new Scanner(System.in);
         System.out.print("로그 파일의 경로 입력 : ");
         String input = scanner.nextLine();
-        String format = String.format(input + "/server.log");
 
 
-        BufferedReader bufferedReader = new BufferedReader(new FileReader(format));
-//        char[] chars = new char[1024];
-//        int length = bufferedReader.read(chars);
-//
-//        String string = new String(chars, 0, length);
+        BufferedReader bufferedReader = new BufferedReader(new FileReader(input));
+
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("src/io_stream/ex/errorLogs.txt"));
         bufferedReader.readLine();
             if (bufferedReader.readLine().contains("ERROR")) {
                 String string = bufferedReader.readLine();
                 bufferedWriter.write(string);
+                bufferedWriter.newLine();
             }
+            bufferedWriter.flush();
+            bufferedWriter.close();
     }
 }
  /*

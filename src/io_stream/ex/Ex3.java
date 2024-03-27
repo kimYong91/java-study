@@ -1,12 +1,27 @@
 package io_stream.ex;
 
+import java.io.*;
+
 public class Ex3 {
+    public static void main(String[] args) {
+        String filePath = "src/io_stream/ex/chat.log";
+        try (BufferedReader br = new BufferedReader(new FileReader(filePath));) {
+            String line;
+            while ((line = br.readLine()) != null) {
+            String userName = line.split(":")[1].split("]")[1].trim();
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
 }
 /*
     연습문제: 텍스트 기반 채팅 로그 분석기
 
     문제 설명
-    채팅 애플리케이션의 로그 파일을 분석하는 프로그램을 작성해야 합니다. 이 프로그램은 주어진 텍스트 파일 형식의 채팅 로그에서 각 사용자별로 메시지를 얼마나 보냈는지 분석하여 결과를 "chatSummary.txt" 파일에 저장해야 합니다.
+    채팅 애플리케이션의 로그 파일을 분석하는 프로그램을 작성해야 합니다.
+    이 프로그램은 주어진 텍스트 파일 형식의 채팅 로그에서 각 사용자별로 메시지를 얼마나 보냈는지 분석하여 결과를 "chatSummary.txt" 파일에 저장해야 합니다.
 
     요구 사항
     - 로그 파일 형식: "chat.log" 로그 파일은 각 줄마다 하나의 메시지를 기록하며, 각 메시지는 다음 형식을 따릅니다: [시간] 사용자명: 메시지

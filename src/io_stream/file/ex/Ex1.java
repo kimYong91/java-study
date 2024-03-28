@@ -1,16 +1,7 @@
 package io_stream.file.ex;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.nio.file.FileAlreadyExistsException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.Arrays;
-import java.util.List;
+import java.io.*;
 import java.util.Scanner;
-import java.util.stream.Stream;
 
 public class Ex1 {
     public static void main(String[] args) {
@@ -19,23 +10,28 @@ public class Ex1 {
         while (true) {
             System.out.println("1: 정보 저장, 2: 정보 조회");
             int choice = scanner.nextInt();
-            switch (choice) {
-                case 1 :
-                information.inputCreateFileAndWriteFile();
-                return;
-                case 2 :
-
+            scanner.nextLine();
+            if (choice == 1 || choice == 2) {
+                switch (choice) {
+                    case 1:
+                        information.inputCreateFileAndWriteFile();
+                        break;
+                    case 2:
+                        information.readInformation();
+                }
+            } else {
+                System.out.println("1또는 2를 선택하세요");
             }
-
         }
-
     }
 }
+
 class Information {
     String name;
     String email;
     String age;
-    public void inputCreateFileAndWriteFile () {
+
+    public void inputCreateFileAndWriteFile() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("이름: ");
         name = scanner.nextLine();
@@ -43,26 +39,29 @@ class Information {
         email = scanner.nextLine();
         System.out.println("나이: ");
         age = scanner.next();
-        Path path = Paths.get("src", "io_stream", "file", "ex");
-        try {
-            Path file = Files.createFile(path.resolve(name + ".user"));
-            List<String> list = Arrays.asList(name, email, age);
-            try {
-                Files.write(file, list);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        } catch (FileAlreadyExistsException e) {
-            System.out.println("파일이 이미 존재 합니다.");
+        scanner.nextLine();
+        String path = "src/io_stream/file/ex/";
+        File file = new File(path + name + ".user");
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file));) {
+            bufferedWriter.write(name);
+            bufferedWriter.newLine();
+            bufferedWriter.write(email);
+            bufferedWriter.newLine();
+            bufferedWriter.write(age);
+            bufferedWriter.newLine();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
         System.out.println("정보 저장 완료.");
     }
 
-    public void readInformation () {
-
+    public void readInformation() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("파일명(이름): ");
+        name = scanner.next();
+        scanner.nextLine();
+        File userFile = new File("src/io_stream/file/ex/" + name + ".user");
+        System.out.println(userFile.getName());
 
     }
 }

@@ -5,18 +5,15 @@ import java.util.List;
 
 public class Ex4 {
     static class ItemShop {
-
+        boolean item = true;
         public synchronized void buyItem(Player player) {
-            final int ITEM_MAX = 1;
-            int item = ITEM_MAX;
-            while (item > 0) {
-                if (item == 1) {
+
+                if (item == true) {
                     System.out.println("플레이어 " + player.getName() + "가 아이템을 성공적으로 구매 하였습니다.");
-                    item--;
+                    item = false;
                 } else {
                     System.out.println("플레이어 " + player.getName() + "의 구매 시도 실패: 아이템이 이미 판매되었습니다.");
                 }
-            }
 
         }
     }
@@ -44,13 +41,11 @@ public class Ex4 {
 
     public static void main(String[] args) {
         ItemShop itemShop = new ItemShop();
-        Thread player1 = new Thread(() -> itemShop.buyItem(new Player("희동이")));
-        Thread player2 = new Thread(() -> itemShop.buyItem(new Player("둘리")));
-        Thread player3 = new Thread(() -> itemShop.buyItem(new Player("마이콜")));
+        new Thread(() -> itemShop.buyItem(new Player("희동이"))).start();
+        new Thread(() -> itemShop.buyItem(new Player("둘리"))).start();
+        new Thread(() -> itemShop.buyItem(new Player("마이콜"))).start();
 
-        player1.start();
-        player2.start();
-        player3.start();
+
 
     }
 }

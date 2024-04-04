@@ -3,54 +3,50 @@ package thread.ex;
 public class Ex6 {
     public static void main(String[] args) {
         Restaurant restaurant = new Restaurant();
-        Thread customer = new Thread(() -> restaurant.placeOrder(),"고객");
-        Thread cook = new Thread(() -> restaurant.prepareOrder(),"요리사");
 
-        customer.start();
-        cook.start();
+        while (true) {
+            new Thread(restaurant::placeOrder).start();
+            new Thread(restaurant::prepareOrder).start();
+        }
+
     }
 }
-class Restaurant{
-    boolean order = true;
 
-    //고객의 주문
+class Restaurant {
+    boolean isOrdered = true;
+
     synchronized void placeOrder() {
-    while (order == true) {
+
         try {
-            Thread.sleep(1000);
+            if (isOrdered) {
+                System.out.println("고객: 주문을 합니다.");
+                isOrdered = false;
+                wait();
+            }
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        System.out.println("고객: 주문을 합니다.");
-            order = false;
-            try {
-                wait();
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
-            notifyAll();
-        }
+        notifyAll();
     }
 
-    //음식 준비
     synchronized void prepareOrder() {
-        while (order == false) {
-
-            System.out.println("요리사: 주문을 받아 음식을 준비합니다.");
-            try {
-                Thread.sleep(2000);
-                System.out.println("요리사: 음식 준비 완료, 서빙합니다.");
-                order = true;
-                notify();
-            } catch (InterruptedException e) {}
-                try {
-                    wait();
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
+        try {
+            if (!isOrdered) {
+                System.out.println("요리사: 주문을 받아 음식을 준비합니다.");
+            }
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
         }
+        System.out.println("요리사: 음식 준비 완료, 서빙합니다.");
+        isOrdered = true;
+        try {
+            wait();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        notifyAll();
     }
-
 
 }
 /*

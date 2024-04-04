@@ -6,9 +6,9 @@ import java.net.URL;
 import java.net.URLConnection;
 
 public class Ex2 {
-    public static void main(String[] args) throws IOException {
-        URL url = new URL("https://n.news.naver.com/article/374/0000376756");
-
+    public static void main(String[] args) {
+        try {
+            URL url = new URL("https://n.news.naver.com/article/374/0000376756");
         URLConnection urlConnection = url.openConnection();
 
         InputStream inputStream = urlConnection.getInputStream();
@@ -16,7 +16,7 @@ public class Ex2 {
         BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
 
 
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("src/network/Ex2_홈페이지.html"));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("src/network/ex/Ex2_홈페이지.html"));
 
         while (true) {
             String line = bufferedReader.readLine();
@@ -25,7 +25,7 @@ public class Ex2 {
             bufferedWriter.newLine();
         }
 
-        BufferedReader fileReader = new BufferedReader(new FileReader("src/network/Ex2_홈페이지.html"));
+        BufferedReader fileReader = new BufferedReader(new FileReader("src/network/ex/Ex2_홈페이지.html"));
 
         while (true) {
             String line = fileReader.readLine();
@@ -35,14 +35,18 @@ public class Ex2 {
                 System.out.println(line);
             }
         }
-
-
-
         fileReader.close();
         bufferedWriter.close();
         inputStream.close();
         inputStreamReader.close();
         bufferedReader.close();
+
+        } catch (MalformedURLException e) {
+            System.out.println("잘못된 URL 형식입니다.");
+        }  catch (IOException e) {
+            System.out.println("입출력에 문제가 발생하였습니다.");
+        }
+
 
     }
 }

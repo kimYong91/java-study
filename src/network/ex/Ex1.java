@@ -1,34 +1,39 @@
 package network.ex;
 
+import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.net.URL;
 
 public class Ex1 {
     public static void main(String[] args) {
 
         try {
-            URI uri = new URI("https://www.example.com:8080/path/to/resource?name=John&age=30#section");
+            URL url = new URL("https://www.example.com:8080/path/to/resource?name=John&age=30#section");
 
-            String scheme = uri.getScheme();
-            System.out.println("프로토콜: " + scheme);
-            String host = uri.getHost();
+            String protocol = url.getProtocol();
+            System.out.println("프로토콜: " + protocol);
+            String host = url.getHost();
             System.out.println("호스트: " + host);
-            int port = uri.getPort();
+            int port = url.getPort();
             if (port == -1) {
                 System.out.println("기본 포트");
             } else {
                 System.out.println("포트: " + port);
             }
-            String path = uri.getPath();
+            String path = url.getPath();
             System.out.println("경로: " + path);
-            String query = uri.getQuery();
+            String query = url.getQuery();
             String[] split = query.split("&");
             for (String string : split) {
                 System.out.println(" - " + string);
             }
-        } catch (URISyntaxException e) {
+            String ref = url.getRef();
+            System.out.println(ref);
+        } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
+
 
 
     }

@@ -1,42 +1,44 @@
 package quiz.quiz7;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Random;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class Quiz3 {
     public static void main(String[] args) {
-        new Thread(new Car(1)).start();
-        new Thread(new Car(2)).start();
-        new Thread(new Car(3)).start();
+        List<Car> list = Arrays.asList(new Car(1), new Car(3), new Car(3));
 
+        ExecutorService executorService = Executors.newFixedThreadPool(3);
 
+        for (Car car : list) {
+            executorService.execute(car);
+        }
 
-
+        executorService.shutdown();
     }
-    static class Car implements Runnable{
-        int num;
+}
+class Car implements Runnable{
+    int carName;
 
-        public Car(int num) {
-            this.num = num;
-        }
+    public Car(int carName) {
+        this.carName = carName;
+    }
 
-        @Override
-        public synchronized void run() {
-            System.out.printf("차량 %s이 출발했습니다.\n", num);
-            try {
-                Thread.sleep((new Random().nextInt(10)*100 + 1));
-                for (int i = 1; i <= 10; i++) {
-                    System.out.printf("차량 %s이 %sm를 달렸습니다.\n", num, i * 100);
-                    if (i == 10) {
-                        System.out.printf("차량 %s이 결승선을 통과했습니다!\n", num);
-
-                    }
-
-                }
-
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
+    @Override
+    public void run() {
+        try {
+            System.out.println("차량"+carName+"이 출발했습니다.");
+            for (int i = 1; i < 10; i++) {
+                Thread.sleep(new Random().nextInt(1001));
+                System.out.println("차량"+carName+"이 "+ (i * 100)+"m를 달렸습니다.");
             }
+            System.out.println("차량 "+carName+"이 결승선을 통과했습니다!");
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
         }
+
     }
 }
 /*

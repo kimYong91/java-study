@@ -1,4 +1,4 @@
-package jdbc.연습문제;
+package jdbc.ex;
 
 import java.sql.*;
 

@@ -53,5 +53,47 @@ public class Ex3 {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+
+        /*
+        try (Connection conn = DriverManager.getConnection(url, user, password)) {
+            // 쿼리문 Update 고정적인 부분.
+            StringBuilder query = new StringBuilder("UPDATE users SET ");
+
+            // 동적으로 쿼리문 변경
+            //                                  "컬럼명1=값1, 컬럼명2=값2, ..."
+            //                                  "WHERE userId = ?";
+            // 값을 입력받지 않았을 경우 ""
+            if (!username.isEmpty()) {
+                // 값이 입력되었을 경우
+                query.append("username = ? ");
+            }
+
+            if (!password.isEmpty()) {
+                // 값이 입력되었을 경우
+                query.append(", ");
+                query.append("password = ? ");
+            }
+            if (!age.isEmpty()) {
+                query.append(", ");
+                query.append("password = ? ");
+            }
+            if (!email.isEmpty()) {
+                query.append(", ");
+                query.append("password = ? ");
+            }
+
+            // 최종 조건 쿼리문 (고정
+            query.append("WHERE userId = ?");
+
+            // 쿼리문 확인
+            System.out.println(query.toString());
+
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+         */
+
+
     }
 }

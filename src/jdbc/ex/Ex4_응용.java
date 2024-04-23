@@ -3,7 +3,7 @@ package jdbc.ex;
 import java.sql.*;
 import java.util.Scanner;
 
-public class Ex5_Ex4_응용 {
+public class Ex4_응용 {
     public static void main(String[] args) {
         /* 수정 출력예시
 

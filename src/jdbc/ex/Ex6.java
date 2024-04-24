@@ -1,15 +1,18 @@
 package jdbc.ex;
 
 import jdbc.board.Board;
-import jdbc.board.BoardEx8;
 
 import java.sql.*;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class Ex6 {
     // 필드
     private Scanner scanner = new Scanner(System.in);
     private Connection conn;
+
+    private String userId;
 
     public Ex6() {
         // 인스턴스 생성되면서 객체 연결하고 예외 생기면 메시지 출력 후 종료
@@ -24,8 +27,11 @@ public class Ex6 {
         }
     }
     public void list() {
-
-        System.out.println("[게시물 목록]");
+        List<String> list = Arrays.asList("게시물 목록");
+        System.out.println(list);
+        if (userId != null) {
+            list.addLast("사용자: " + userId);
+        }
         System.out.println("----------------------------------------------------------------");
         System.out.printf("%-6s%-12s%-16s%-40s\n", "no", "writer", "date", "title");
         System.out.println("----------------------------------------------------------------");
@@ -75,8 +81,8 @@ public class Ex6 {
             case "1" -> create();
             case "2" -> read();
             case "3" -> clear();
-            case "4" -> Join();
-            case "5" -> Login();
+            case "4" -> join();
+            case "5" -> login();
             case "6" -> exit();
         }
     }
@@ -259,7 +265,7 @@ public class Ex6 {
         list();
     }
 
-    private void Join() {
+    private void join() {
         System.out.println("[새 사용자 입력]");
         System.out.print("아이디: ");
         String userId = scanner.nextLine();
@@ -306,10 +312,10 @@ public class Ex6 {
         }
 
     }
-    private void Login () {
+    private void login() {
         System.out.println("[로그인]");
         System.out.print("아이디: ");
-        String userId = scanner.nextLine();
+        userId = scanner.nextLine();
         System.out.print("비밀번호: ");
         String password = scanner.nextLine();
         System.out.println("------------------------------------------------");
@@ -325,7 +331,6 @@ public class Ex6 {
                 pstmt.executeUpdate();
                 System.out.println("로그인 되었습니다.");
                 list();
-
             } catch (SQLException e) {
                 System.out.println("없는 아이디 입니다.");
                 exit();

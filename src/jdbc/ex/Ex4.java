@@ -1,5 +1,9 @@
 package jdbc.ex;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Ex4 {
     /*
     연습문제 2: 사용자 삭제

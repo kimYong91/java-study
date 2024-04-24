@@ -3,6 +3,7 @@ package jdbc.ex;
 import jdbc.board.Board;
 
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
@@ -27,11 +28,11 @@ public class Ex6 {
         }
     }
     public void list() {
-        List<String> list = Arrays.asList("게시물 목록");
-        System.out.println(list);
+        List<String> list = new ArrayList<>(Arrays.asList("게시글 목록"));
         if (userId != null) {
-            list.addLast("사용자: " + userId);
+            list.add("사용자: " + userId);
         }
+        System.out.println(list);
         System.out.println("----------------------------------------------------------------");
         System.out.printf("%-6s%-12s%-16s%-40s\n", "no", "writer", "date", "title");
         System.out.println("----------------------------------------------------------------");
@@ -99,7 +100,7 @@ public class Ex6 {
         Board board = new Board(title, content, writer);
 
         // 보조 메뉴 출력
-        System.out.println("----------------------------------");
+        System.out.println("----------------------------------------------------------------");
         System.out.println("보조 메뉴: 1. OK | 2. Cancel");
         System.out.println("메뉴 선택");
         String menu = scanner.nextLine();
@@ -152,16 +153,16 @@ public class Ex6 {
                         rs.getDate(5)
                 );
                 // 게시물 상세내용 출력
-                System.out.println("-----------------------------------------");
+                System.out.println("----------------------------------------------------------------");
                 System.out.println("글번호 : " + board.getBoardNo());
                 System.out.println("글제목 : " + board.getTitle());
                 System.out.println("글내용 : " + board.getContent());
                 System.out.println("글쓴이 : " + board.getWriter());
                 System.out.println("쓴날짜 : " + board.getDate());
-                System.out.println("-----------------------------------------");
+                System.out.println("----------------------------------------------------------------");
 
                 // 보조메뉴 출력
-                System.out.println("------------------------------------------");
+                System.out.println("----------------------------------------------------------------");
                 System.out.println("보조메뉴 : 1. Update | 2. Delete | 3. List");
                 System.out.print("메뉴선택 : ");
                 String menu = scanner.nextLine();
@@ -197,7 +198,7 @@ public class Ex6 {
 
 
         // 보조메뉴 출력
-        System.out.println("------------------------------------------");
+        System.out.println("----------------------------------------------------------------");
         System.out.println("보조메뉴 : 1. Update | 2. Delete | 3. List");
         System.out.print("메뉴선택 : ");
         String menu = scanner.nextLine();
@@ -243,7 +244,7 @@ public class Ex6 {
     }
 
     private void clear() {
-        System.out.println("------------------------------------------");
+        System.out.println("----------------------------------------------------------------");
         System.out.println("모든 게시글을 삭제합니다. 정말 삭제하시겠습니까?");
         System.out.println("보조 메뉴: 1. OK | 2. Cancel");
         System.out.print("메뉴선택 : ");
@@ -302,11 +303,11 @@ public class Ex6 {
 
             } catch (SQLException e) {
                 e.printStackTrace();
-                exit();
+                list();
             }
         } else if (menu.equals("2")){
             System.out.println("사용자 입력을 취소합니다.");
-            exit();
+            list();
         } else {
             System.out.println("정확한 번호를 입력하세요");
         }
@@ -318,7 +319,7 @@ public class Ex6 {
         userId = scanner.nextLine();
         System.out.print("비밀번호: ");
         String password = scanner.nextLine();
-        System.out.println("------------------------------------------------");
+        System.out.println("----------------------------------------------------------------");
         System.out.println("보조메뉴: 1.Ok | 2.Cancel");
         System.out.print("메뉴선택: ");
         String menu = scanner.nextLine();
@@ -328,7 +329,7 @@ public class Ex6 {
             try (PreparedStatement pstmt = conn.prepareStatement(sql)){
                 pstmt.setString(1, userId);
                 pstmt.setString(2, password);
-                pstmt.executeUpdate();
+                pstmt.executeQuery();
                 System.out.println("로그인 되었습니다.");
                 list();
             } catch (SQLException e) {

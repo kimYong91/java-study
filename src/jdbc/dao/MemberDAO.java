@@ -9,9 +9,9 @@ public interface MemberDAO {
 
 
     // CRUD
-    void insert(MemberDTO memberDTO);   // 데이터 생성
-    MemberDTO getMemberById(String id);      // R 아이디(식별자)로 조회
-    void update(MemberDTO memberDTO);    // U 데이터 수정
-    void delete(String id);    // D 식별자로 삭제
-    List<MemberDTO> getAllMembers();
+    void insert(MemberDTO memberDTO);   // C 데이터 생성
+    MemberDTO getMemberById(String id); // R 아이디(식별자)로 조회
+    void update(MemberDTO memberDTO);   // U 데이터 수정
+    void delete(String id);             // D 식별자로 삭제
+    List<MemberDTO> getAllMembers();    // 회원 목록
 }

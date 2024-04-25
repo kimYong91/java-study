@@ -235,7 +235,10 @@ public class Ex6 {
 
             try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
                 pstmt.setInt(1, board.getBoardNo());
-                pstmt.executeUpdate();
+                int rows = pstmt.executeUpdate();
+                System.out.println(rows + "행을 삭제 하셨습니다.");
+
+                list();
             } catch (SQLException e) {
                 e.printStackTrace();
                 exit();
@@ -310,6 +313,7 @@ public class Ex6 {
             list();
         } else {
             System.out.println("정확한 번호를 입력하세요");
+            join();
         }
 
     }
@@ -329,12 +333,14 @@ public class Ex6 {
             try (PreparedStatement pstmt = conn.prepareStatement(sql)){
                 pstmt.setString(1, userId);
                 pstmt.setString(2, password);
-                pstmt.executeQuery();
+                ResultSet rs = pstmt.executeQuery();
+                if (rs.next()) {
                 System.out.println("로그인 되었습니다.");
                 list();
+                }
             } catch (SQLException e) {
                 System.out.println("없는 아이디 입니다.");
-                exit();
+                login();
             }
         } else if (menu.equals("2")) {
             System.out.println("로그인을 취소 하셨습니다.");

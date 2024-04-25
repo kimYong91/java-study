@@ -89,24 +89,16 @@ public class Ex7 {
     }
 
     private void create() {
-        Board board = null;
-        if (userId == null) {
-            System.out.println("[새 게시물 생성]");
-            System.out.print("제목 : ");
-            String title = scanner.nextLine();
-            System.out.print("내용 : ");
-            String content = scanner.nextLine();
-            System.out.print("글쓴이 : ");
-            String writer = scanner.nextLine();
-            board = new Board(title, content, writer);
-        } else if (userId != null) {
-            System.out.println("[새 게시물 생성] 사용자 " + userId);
-            System.out.print("제목 : ");
-            String title = scanner.nextLine();
-            System.out.print("내용 : ");
-            String content = scanner.nextLine();
-            board = new Board(title, content, userId);
-        }
+        System.out.println("[새 게시물 생성]");
+        System.out.print("제목 : ");
+        String title = scanner.nextLine();
+        System.out.print("내용 : ");
+        String content = scanner.nextLine();
+        System.out.print("글쓴이 : ");
+        String writer = scanner.nextLine();
+
+        Board board = new Board(title, content, writer);
+
         // 보조 메뉴 출력
         System.out.println("----------------------------------------------------------------");
         System.out.println("보조 메뉴: 1. OK | 2. Cancel");
@@ -243,7 +235,10 @@ public class Ex7 {
 
             try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
                 pstmt.setInt(1, board.getBoardNo());
-                pstmt.executeUpdate();
+                int rows = pstmt.executeUpdate();
+                System.out.println(rows + "행을 삭제 하셨습니다.");
+
+                list();
             } catch (SQLException e) {
                 e.printStackTrace();
                 exit();
@@ -318,6 +313,7 @@ public class Ex7 {
             list();
         } else {
             System.out.println("정확한 번호를 입력하세요");
+            join();
         }
 
     }
@@ -337,12 +333,14 @@ public class Ex7 {
             try (PreparedStatement pstmt = conn.prepareStatement(sql)){
                 pstmt.setString(1, userId);
                 pstmt.setString(2, password);
-                pstmt.executeQuery();
-                System.out.println("로그인 되었습니다.");
-                list();
+                ResultSet rs = pstmt.executeQuery();
+                if (rs.next()) {
+                    System.out.println("로그인 되었습니다.");
+                    list();
+                }
             } catch (SQLException e) {
                 System.out.println("없는 아이디 입니다.");
-                exit();
+                login();
             }
         } else if (menu.equals("2")) {
             System.out.println("로그인을 취소 하셨습니다.");

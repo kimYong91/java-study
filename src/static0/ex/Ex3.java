@@ -1,7 +1,9 @@
 package static0.ex;
 
+import static static0.ex.MathArrayUtil.*;
+
 public class Ex3 {
-     /*
+    /*
     문제3:
     수학 배열 유틸리티 클래스
     배열을 활용한 수학 유틸리티 클래스(MathArrayUtils)를 만드세요.
@@ -27,4 +29,16 @@ public class Ex3 {
     min=1
     max=5
      */
+
+    public static void main(String[] args) {
+        int[] values = {1, 2, 3, 4, 5, 10, 20, 30};
+        System.out.println("sum=" + sum(values));
+        System.out.println("average=" + average(values));
+        System.out.println("min=" + min(values));
+        System.out.println("max=" + max(values));
+
+        // 생성이 되지 않게 막기 : 생성자를 private으로 변경한다.
+        // MathArrayUtil util = new MathArrayUtil();
+        // util.sum(values);
+    }
 }
